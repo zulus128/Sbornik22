@@ -169,20 +169,50 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int ansver1=0x7f020000;
+        public static final int bg=0x7f020001;
+        public static final int friend=0x7f020002;
+        public static final int friend2=0x7f020003;
+        public static final int galka=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int icon_01=0x7f020006;
+        public static final int icon_02=0x7f020007;
+        public static final int icon_03=0x7f020008;
+        public static final int icon_04=0x7f020009;
+        public static final int icon_05=0x7f02000a;
+        public static final int icon_06=0x7f02000b;
+        public static final int icon_07=0x7f02000c;
+        public static final int icon_08=0x7f02000d;
+        public static final int id=0x7f02000e;
+        public static final int info=0x7f02000f;
+        public static final int left=0x7f020010;
+        public static final int list=0x7f020011;
+        public static final int lock=0x7f020012;
+        public static final int my=0x7f020013;
+        public static final int my1=0x7f020014;
+        public static final int my2=0x7f020015;
+        public static final int my21=0x7f020016;
+        public static final int my33=0x7f020017;
+        public static final int pic1=0x7f020018;
+        public static final int pic2=0x7f020019;
+        public static final int refresh=0x7f02001a;
+        public static final int rigth=0x7f02001b;
+        public static final int search=0x7f02001c;
     }
     public static final class id {
-        public static final int DetailTaskTextView=0x7f090000;
-        public static final int LinLayout_razdel01=0x7f090001;
-        public static final int LinLayout_task01=0x7f090005;
-        public static final int RazdelList=0x7f090002;
-        public static final int RazdelNameTextView=0x7f090003;
-        public static final int RazdelTextView=0x7f090004;
-        public static final int TaskList=0x7f090006;
-        public static final int TaskNameTextView=0x7f090007;
-        public static final int TaskTextView=0x7f090008;
-        public static final int action_search=0x7f09000a;
-        public static final int action_settings=0x7f090009;
+        public static final int DetailTaskTextView=0x7f090001;
+        public static final int LinLayout_detailTask01=0x7f090000;
+        public static final int LinLayout_razdel01=0x7f090003;
+        public static final int LinLayout_task01=0x7f090007;
+        public static final int RazdelList=0x7f090004;
+        public static final int RazdelNameTextView=0x7f090005;
+        public static final int RazdelTextView=0x7f090006;
+        public static final int TaskList=0x7f090008;
+        public static final int TaskNameTextView=0x7f090009;
+        public static final int TaskTextView=0x7f09000a;
+        public static final int action_search=0x7f09000c;
+        public static final int action_settings=0x7f09000b;
+        public static final int button_pic=0x7f090002;
     }
     public static final class layout {
         public static final int detailtask_activity=0x7f030000;

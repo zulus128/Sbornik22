@@ -1,5 +1,5 @@
 package com.vkassin.sbornik22;
-//123
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -66,7 +66,7 @@ public class Common {
 	        input.read(buffer);
 	        input.close();
 	        String s = new String(buffer);
-	        Log.i(TAG, "s = " + s);
+//	        Log.i(TAG, "s = " + s);
 		    JSONArray tr = new JSONArray(s);
 		    
 		    

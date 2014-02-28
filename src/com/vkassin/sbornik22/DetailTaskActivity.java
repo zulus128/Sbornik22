@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
@@ -26,6 +27,15 @@ public class DetailTaskActivity extends Activity {
 		
 //		getActionBar().setTitle("Hello world App");
 
+//		Button button = (Button) findViewById(R.id.button_pic);
+//		button.setOnClickListener(new View.OnClickListener() {
+//		    public void onClick(View v) {
+//		        // Do something in response to button click
+//		    }
+//		});
 	}
 	
+	public void goToPic(View view) {
+	    // Do something in response to button click
+	}
 }

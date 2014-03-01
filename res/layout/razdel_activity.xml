@@ -5,9 +5,37 @@
     tools:context=".RazdelListActivity" >
 
     <LinearLayout
+        android:id="@+id/LinLayout_razdelTask01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/LightSteelBlue"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottompanel_vertical_margin"
+        android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+        android:paddingRight="@dimen/bottompanel_horizontal_margin"
+        android:paddingTop="@dimen/bottompanel_vertical_margin" >
+
+        <ImageView
+            android:id="@+id/imageTitle"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:src="@drawable/icon_02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_label" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/LinLayout_razdel01"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_below="@+id/LinLayout_razdelTask01"
         android:orientation="vertical" >
 
         <ListView

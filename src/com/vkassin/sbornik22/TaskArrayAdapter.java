@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class TaskArrayAdapter extends ArrayAdapter<TaskItem> {
@@ -38,6 +39,9 @@ public class TaskArrayAdapter extends ArrayAdapter<TaskItem> {
     		title.setText(item.name);
     		text.setText(item.text);
     		
+			ImageView imgMy1 = (ImageView) convertView.findViewById(R.id.imageMy1);
+			imgMy1.setVisibility((item.my1 == 1)?View.VISIBLE:View.GONE);
+
     	}
     	
     	return convertView;

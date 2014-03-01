@@ -4,25 +4,43 @@
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
     android:orientation="vertical"
-    android:paddingLeft="3dp"
     android:weightSum="1" >
 
-    <TextView
-        android:id="@+id/TaskNameTextView"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/RelLayout_TaskItem01"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/Black"
-        android:textSize="15sp" >
-    </TextView>
+        android:background="@color/MyLightBlue" >
+
+        <TextView
+            android:id="@+id/TaskNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/tasklistitem_horizontal_margin"
+            android:paddingTop="6sp"
+            android:textColor="@color/MyBlue"
+            android:textSize="13sp"
+            android:textStyle="bold|italic" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageMy1"
+            android:layout_width="30sp"
+            android:layout_marginRight="5sp"
+            android:layout_height="30sp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/my33" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/TaskTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="3"
+        android:paddingLeft="@dimen/tasklistitem_horizontal_margin"
         android:textColor="@color/Black"
         android:textSize="12sp" >
-
     </TextView>
 
 </LinearLayout>

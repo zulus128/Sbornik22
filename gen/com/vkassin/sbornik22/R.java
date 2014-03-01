@@ -35,9 +35,7 @@ public final class R {
         public static final int DarkBlue=0x7f040089;
         public static final int DarkCyan=0x7f040083;
         public static final int DarkGoldenrod=0x7f040046;
-        /**  
- <color name="DarkGray">#A9A9A9</color>
- 
+        /**   <color name="DarkGray">#A9A9A9</color> 
          */
         public static final int DarkGray=0x7f04004d;
         public static final int DarkGreen=0x7f040086;
@@ -109,6 +107,8 @@ public final class R {
         public static final int MintCream=0x7f040025;
         public static final int MistyRose=0x7f04000c;
         public static final int Moccasin=0x7f04000e;
+        public static final int MyBlue=0x7f04008c;
+        public static final int MyLightBlue=0x7f04008d;
         public static final int NavajoWhite=0x7f04000f;
         public static final int Navy=0x7f04008a;
         public static final int OldLace=0x7f04001f;
@@ -169,6 +169,9 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
         public static final int bottompanel_horizontal_margin=0x7f050002;
         public static final int bottompanel_vertical_margin=0x7f050003;
+        public static final int razdelcell_horizontal_margin=0x7f050004;
+        public static final int razdelcellsubtitle_horizontal_margin=0x7f050005;
+        public static final int tasklistitem_horizontal_margin=0x7f050006;
     }
     public static final class drawable {
         public static final int ansver1=0x7f020000;
@@ -205,19 +208,29 @@ public final class R {
     public static final class id {
         public static final int DetailTaskTextView=0x7f090000;
         public static final int LinLayout_detailTask01=0x7f090001;
-        public static final int LinLayout_razdel01=0x7f090005;
+        public static final int LinLayout_razdel01=0x7f090009;
         public static final int LinLayout_razdelTask01=0x7f090003;
-        public static final int LinLayout_task01=0x7f090009;
-        public static final int RazdelList=0x7f090006;
-        public static final int RazdelNameTextView=0x7f090007;
-        public static final int RazdelTextView=0x7f090008;
-        public static final int TaskList=0x7f09000a;
-        public static final int TaskNameTextView=0x7f09000b;
-        public static final int TaskTextView=0x7f09000c;
-        public static final int action_search=0x7f09000e;
-        public static final int action_settings=0x7f09000d;
+        public static final int LinLayout_task01=0x7f090011;
+        public static final int RazdelList=0x7f09000a;
+        public static final int RazdelNameTextView=0x7f09000c;
+        public static final int RazdelTextView=0x7f09000d;
+        public static final int RelLayout_TaskItem01=0x7f090013;
+        public static final int RelLayout_TaskList01=0x7f09000e;
+        public static final int TaskList=0x7f090012;
+        public static final int TaskListTitle01=0x7f09000f;
+        public static final int TaskNameTextView=0x7f090014;
+        public static final int TaskTextView=0x7f090016;
+        public static final int action_search=0x7f090018;
+        public static final int action_settings=0x7f090017;
+        public static final int button_fav=0x7f090006;
+        public static final int button_info=0x7f090005;
+        public static final int button_networks=0x7f090008;
+        public static final int button_oglav=0x7f090010;
         public static final int button_pic=0x7f090002;
+        public static final int button_search=0x7f090007;
+        public static final int imageMy1=0x7f090015;
         public static final int imageTitle=0x7f090004;
+        public static final int razdelImageT=0x7f09000b;
     }
     public static final class layout {
         public static final int detailtask_activity=0x7f030000;
@@ -233,6 +246,11 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int buttitle_fav=0x7f060005;
+        public static final int buttitle_info=0x7f060004;
+        public static final int buttitle_netw=0x7f060007;
+        public static final int buttitle_oglav=0x7f060008;
+        public static final int buttitle_search=0x7f060006;
         public static final int hello_world=0x7f060002;
         public static final int title_label=0x7f060003;
     }

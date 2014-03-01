@@ -3,26 +3,40 @@
     android:layout_width="0dip"
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
-    android:orientation="vertical"
-    android:paddingLeft="3dp"
-    >
+    android:orientation="horizontal"
+    android:paddingLeft="3dp" >
 
-    <TextView
-        android:id="@+id/RazdelNameTextView"
+    <ImageView
+        android:id="@+id/razdelImageT"
+        android:layout_width="40sp"
+        android:layout_height="40sp" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/Black"
-        android:textSize="15sp" >
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/razdelcell_horizontal_margin" >
 
-    </TextView>
+        <TextView
+            android:id="@+id/RazdelNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+        </TextView>
 
-    <TextView
-        android:id="@+id/RazdelTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/Black"
-        android:textSize="12sp" >
-
-    </TextView>
+        <TextView
+            android:id="@+id/RazdelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/razdelcellsubtitle_horizontal_margin"
+            android:textColor="@color/Black"
+            android:maxLines="2"
+            android:minLines="2"
+            android:textSize="12sp" >
+        </TextView>
+    </LinearLayout>
 
 </LinearLayout>

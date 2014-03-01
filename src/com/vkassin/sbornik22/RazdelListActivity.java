@@ -39,10 +39,24 @@ public class RazdelListActivity extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				
 				Common.curRazdel = adapter.getItems().get(arg2).getId();
+				Common.secondListTitle = "БЭГ. " + Common.curRazdel + ". " + adapter.getItems().get(arg2).name;
 				Intent i = new Intent(RazdelListActivity.this, TaskListActivity.class);
 				startActivity(i);
 			}
 		});
+	}
+
+	public void goToInfo(View view) {
+	    // Do something in response to button click
+	}
+	public void goToFavourites(View view) {
+	    // Do something in response to button click
+	}
+	public void goToSearch(View view) {
+	    // Do something in response to button click
+	}
+	public void goToNetworks(View view) {
+	    // Do something in response to button click
 	}
 
 //	@Override

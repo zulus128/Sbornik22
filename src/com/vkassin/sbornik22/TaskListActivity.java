@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 
 public class TaskListActivity extends Activity {
 
@@ -22,12 +23,15 @@ public class TaskListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tasklist_activity);
 		
+		TextView title = (TextView) this.findViewById(R.id.TaskListTitle01);
+		title.setText(Common.secondListTitle);
+		
 		list = (ListView) this.findViewById(R.id.TaskList);
 		ArrayList<TaskItem> filteredTasks = new ArrayList<TaskItem>();
 		for (Iterator<TaskItem> it=Common.tasks.iterator(); it.hasNext();) {
 			
 			TaskItem task = it.next();
-			if(task.section == Common.curRazdel)
+			if((task.section == Common.curRazdel) || (Common.curRazdel == 1))
 				filteredTasks.add(task);
 		}
 		adapter = new TaskArrayAdapter(this, R.layout.tasklist_item, filteredTasks);
@@ -45,4 +49,14 @@ public class TaskListActivity extends Activity {
 		});
 	}
 	
+	public void goToFavourites(View view) {
+	    // Do something in response to button click
+	}
+	public void goToSearch(View view) {
+	    // Do something in response to button click
+	}
+	public void goToOglav(View view) {
+	    // Do something in response to button click
+	}
+
 }

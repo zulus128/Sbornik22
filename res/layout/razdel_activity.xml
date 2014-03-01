@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     tools:context=".RazdelListActivity" >
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/LinLayout_razdelTask01"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/LightSteelBlue"
+        android:background="@color/MyBlue"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/bottompanel_vertical_margin"
         android:paddingLeft="@dimen/bottompanel_horizontal_margin"
@@ -25,11 +25,61 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageTitle"
             android:paddingLeft="10sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical"
-            android:text="@string/title_label" />
-    </LinearLayout>
+            android:paddingTop="10sp"
+            android:text="@string/title_label"
+            android:textColor="@color/White"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/button_info"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/info"
+            android:contentDescription="@string/buttitle_info"
+            android:onClick="goToInfo"
+            android:paddingRight="10sp"
+            android:paddingTop="10sp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_fav"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_toLeftOf="@+id/button_info"
+            android:background="@drawable/my"
+            android:contentDescription="@string/buttitle_fav"
+            android:onClick="goToFavourites"
+            android:paddingRight="10sp"
+            android:paddingTop="10sp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_search"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_toLeftOf="@+id/button_fav"
+            android:background="@drawable/search"
+            android:contentDescription="@string/buttitle_search"
+            android:onClick="goToSearch"
+            android:paddingRight="10sp"
+            android:paddingTop="10sp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_networks"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_toLeftOf="@+id/button_search"
+            android:background="@drawable/friend"
+            android:contentDescription="@string/buttitle_netw"
+            android:onClick="goToNetworks"
+            android:paddingRight="10sp"
+            android:paddingTop="10sp"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/LinLayout_razdel01"

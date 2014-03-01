@@ -22,6 +22,7 @@ public class Common {
 	public static ArrayList<RazdelItem> razdels;
 	public static ArrayList<TaskItem> tasks;
 	public static Context app_ctx;
+	public static String secondListTitle;
 
 	public final static String JSON_TASK_TAG_ID = "id";
 	public final static String JSON_TASK_TAG_ORDER = "order";
@@ -30,6 +31,7 @@ public class Common {
 	public final static String JSON_TASK_TAG_TEXT = "text";
 	public final static String JSON_TASK_TAG_ANSWER = "answer";
 	public final static String JSON_TASK_TAG_SECTION = "section";
+	public final static String JSON_TASK_TAG_MY1 = "my1";
 
 	public final static String JSON_RAZDEL_TAG_ID = "section";
 	public final static String JSON_RAZDEL_TAG_ORDER = "order";
@@ -37,22 +39,10 @@ public class Common {
 	public final static String JSON_RAZDEL_TAG_RATE = "rate";
 	public final static String JSON_RAZDEL_TAG_NAME = "name";
 	public final static String JSON_RAZDEL_TAG_TEXT = "opis_r";
+	public final static String JSON_RAZDEL_TAG_ICON = "icon";
 
 	public static int curRazdel;
 	public static int curTask;
-	
-//	static {
-//
-//		RazdelItem i1 = new RazdelItem(1);
-//		i1.name = "Math";
-//		i1.text = "Math description";
-//		RazdelItem i2 = new RazdelItem(2);
-//		i2.name = "Physics";
-//		i2.text = "Physics description";
-//		razdels = new ArrayList<RazdelItem>();
-//		razdels.add(i1);
-//		razdels.add(i2);
-//	}
 	
 	public static void loadDatabase() {
 		
@@ -80,6 +70,7 @@ public class Common {
 				ri.text = row.getString(JSON_TASK_TAG_TEXT);
 				ri.name = row.getString(JSON_TASK_TAG_NAME);
 				ri.answer = row.getString(JSON_TASK_TAG_ANSWER);
+				ri.my1 = row.getInt(JSON_TASK_TAG_MY1);
 				tasks.add(ri);
 //				Log.i(TAG, "row = " + row);
 			}
@@ -101,8 +92,9 @@ public class Common {
 				ri.rate = row.getInt(JSON_RAZDEL_TAG_RATE);
 				ri.text = row.getString(JSON_RAZDEL_TAG_TEXT);
 				ri.name = row.getString(JSON_RAZDEL_TAG_NAME);
+				ri.icon = row.getString(JSON_RAZDEL_TAG_ICON);
 				razdels.add(ri);
-				Log.i(TAG, "row = " + row);
+//				Log.i(TAG, "row = " + row);
 			}
 
 			Collections.sort(tasks, new Comparator<TaskItem>() {

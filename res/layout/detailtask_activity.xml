@@ -17,20 +17,20 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/LightSteelBlue"
-            android:paddingBottom="@dimen/bottompanel_vertical_margin"
-    android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-    android:paddingRight="@dimen/bottompanel_horizontal_margin"
-    android:paddingTop="@dimen/bottompanel_vertical_margin"
-        android:orientation="horizontal" >
+        android:background="@color/MyBlue"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottompanel_vertical_margin"
+        android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+        android:paddingRight="@dimen/bottompanel_horizontal_margin"
+        android:paddingTop="@dimen/bottompanel_vertical_margin" >
 
         <ImageButton
             android:id="@+id/button_pic"
             android:layout_width="60sp"
             android:layout_height="35sp"
+            android:background="@drawable/button_pic1_custom"
             android:onClick="goToPic"
-            android:scaleType="fitXY"
-            android:background="@drawable/button_pic1_custom" />
+            android:scaleType="fitXY" />
     </LinearLayout>
 
 </RelativeLayout>

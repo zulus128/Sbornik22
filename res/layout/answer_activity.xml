@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskListActivity" >
+
+    <RelativeLayout
+        android:id="@+id/RelLayout_picture00"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/Gray" >
+
+        <RelativeLayout
+            android:id="@+id/RelLayout_picture01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10sp"
+            android:padding="5sp" >
+
+            <ImageView
+                android:id="@+id/imageId"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/id" />
+
+            <TextView
+                android:id="@+id/PictureTaskId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/White"
+                android:textSize="14sp" >
+            </TextView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/PictureTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/Red"
+            android:textSize="18sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageMy"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10sp"
+            android:padding="5sp"
+            android:src="@drawable/my33" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayout_picture00"
+        android:layout_marginBottom="45sp" >
+
+        <TextView
+            android:id="@+id/PictureTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:paddingBottom="@dimen/bottompanel_vertical_margin"
+            android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+            android:paddingRight="@dimen/bottompanel_horizontal_margin"
+            android:paddingTop="@dimen/bottompanel_vertical_margin"
+            android:textColor="@color/Black"
+            android:textSize="18sp" >
+        </TextView>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/LinLayout_detailTask01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/MyBlue"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottompanel_vertical_margin"
+        android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+        android:paddingRight="@dimen/bottompanel_horizontal_margin"
+        android:paddingTop="@dimen/bottompanel_vertical_margin" >
+
+        <ImageButton
+            android:id="@+id/button_left"
+            android:layout_width="40sp"
+            android:layout_height="35sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/left"
+            android:onClick="goBack"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_friends"
+            android:layout_width="40sp"
+            android:layout_height="35sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/friend2"
+            android:onClick="goFriend"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_pic"
+            android:layout_width="60sp"
+            android:layout_height="35sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/button_pic1_custom"
+            android:onClick="goToPic"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_answer"
+            android:layout_width="60sp"
+            android:layout_height="35sp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/ansver1"
+            android:onClick="goAnswer"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_my"
+            android:layout_width="40sp"
+            android:layout_height="35sp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/my1"
+            android:onClick="goFriend"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_right"
+            android:layout_width="40sp"
+            android:layout_height="35sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/rigth"
+            android:onClick="goForward"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+</RelativeLayout>

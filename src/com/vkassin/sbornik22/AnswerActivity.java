@@ -7,18 +7,18 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class PictureActivity extends Activity  {
+public class AnswerActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.picture_activity);
+		setContentView(R.layout.answer_activity);
 		
 		TaskItem ti = Common.getCurTask();
 		
 		TextView title = (TextView) this.findViewById(R.id.PictureTaskTitle);
-		title.setText(ti.name);
+		title.setText(R.string.answer);
 		
 		ImageView imgMy1 = (ImageView) this.findViewById(R.id.imageMy);
 		imgMy1.setVisibility((ti.my1 == 1)?View.VISIBLE:View.GONE);
@@ -26,20 +26,14 @@ public class PictureActivity extends Activity  {
 		TextView idd = (TextView) this.findViewById(R.id.PictureTaskId);
 		idd.setText("" + ti.getId());
 		
-		ImageView img = (ImageView) this.findViewById(R.id.imagePicture);
-		String uri = "drawable/" + ti.pic;
-		int imageResource = getResources().getIdentifier(uri, null, getPackageName());
-		img.setImageResource(imageResource);
-		
 		TextView descr = (TextView) this.findViewById(R.id.PictureTextView);
-		descr.setText(ti.picsign);
+		descr.setText(ti.answer);
 
 	}
 	
-	public void goAnswer(View view) {
+	public void goToPic(View view) {
 
-		Intent i = new Intent(PictureActivity.this, AnswerActivity.class);
+		Intent i = new Intent(AnswerActivity.this, PictureActivity.class);
 		startActivity(i);
 	}
-
 }

@@ -43,4 +43,10 @@ public class DetailTaskActivity extends Activity {
 		Intent i = new Intent(DetailTaskActivity.this, PictureActivity.class);
 		startActivity(i);
 	}
+	
+	public void goAnswer(View view) {
+
+		Intent i = new Intent(DetailTaskActivity.this, AnswerActivity.class);
+		startActivity(i);
+	}
 }

@@ -221,26 +221,26 @@ public final class R {
         public static final int search=0x7f02002c;
     }
     public static final class id {
-        public static final int DetailTaskId=0x7f090003;
-        public static final int DetailTaskTextView=0x7f090006;
-        public static final int DetailTaskTitle=0x7f090004;
+        public static final int DetailTaskId=0x7f090010;
+        public static final int DetailTaskTextView=0x7f090012;
+        public static final int DetailTaskTitle=0x7f090011;
         public static final int LinLayout_detailTask01=0x7f090007;
-        public static final int LinLayout_detailTask02=0x7f090012;
+        public static final int LinLayout_detailTask02=0x7f090013;
         public static final int LinLayout_razdel01=0x7f09001b;
         public static final int LinLayout_razdelTask01=0x7f090015;
         public static final int LinLayout_task01=0x7f090023;
-        public static final int PictureTaskId=0x7f090010;
-        public static final int PictureTaskTitle=0x7f090011;
-        public static final int PictureTextView=0x7f090014;
+        public static final int PictureTaskId=0x7f090003;
+        public static final int PictureTaskTitle=0x7f090004;
+        public static final int PictureTextView=0x7f090006;
         public static final int RazdelList=0x7f09001c;
         public static final int RazdelNameTextView=0x7f09001e;
         public static final int RazdelTextView=0x7f09001f;
         public static final int RelLayout_TaskItem01=0x7f090025;
         public static final int RelLayout_TaskList01=0x7f090020;
-        public static final int RelLayout_detailTask00=0x7f090000;
-        public static final int RelLayout_detailTask01=0x7f090001;
-        public static final int RelLayout_picture00=0x7f09000e;
-        public static final int RelLayout_picture01=0x7f09000f;
+        public static final int RelLayout_detailTask00=0x7f09000e;
+        public static final int RelLayout_detailTask01=0x7f09000f;
+        public static final int RelLayout_picture00=0x7f090000;
+        public static final int RelLayout_picture01=0x7f090001;
         public static final int TaskList=0x7f090024;
         public static final int TaskListTitle01=0x7f090021;
         public static final int TaskNameTextView=0x7f090026;
@@ -261,17 +261,19 @@ public final class R {
         public static final int imageId=0x7f090002;
         public static final int imageMy=0x7f090005;
         public static final int imageMy1=0x7f090027;
-        public static final int imagePicture=0x7f090013;
+        public static final int imagePicture=0x7f090014;
         public static final int imageTitle=0x7f090016;
         public static final int razdelImageT=0x7f09001d;
     }
     public static final class layout {
-        public static final int detailtask_activity=0x7f030000;
-        public static final int picture_activity=0x7f030001;
-        public static final int razdel_activity=0x7f030002;
-        public static final int razdel_item=0x7f030003;
-        public static final int tasklist_activity=0x7f030004;
-        public static final int tasklist_item=0x7f030005;
+        public static final int answer_activity=0x7f030000;
+        public static final int detailtask_activity=0x7f030001;
+        public static final int picture_activity=0x7f030002;
+        public static final int razdel_activity=0x7f030003;
+        public static final int razdel_item=0x7f030004;
+        public static final int search_activity=0x7f030005;
+        public static final int tasklist_activity=0x7f030006;
+        public static final int tasklist_item=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -279,6 +281,7 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
+        public static final int answer=0x7f060009;
         public static final int app_name=0x7f060000;
         public static final int buttitle_fav=0x7f060005;
         public static final int buttitle_info=0x7f060004;
@@ -286,6 +289,7 @@ public final class R {
         public static final int buttitle_oglav=0x7f060008;
         public static final int buttitle_search=0x7f060006;
         public static final int hello_world=0x7f060002;
+        public static final int searchDB=0x7f06000a;
         public static final int title_label=0x7f060003;
     }
     public static final class style {

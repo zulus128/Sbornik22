@@ -10,5 +10,7 @@
     <string name="buttitle_search">search</string>
     <string name="buttitle_netw">friends</string>
     <string name="buttitle_oglav">Content</string>
+    <string name="answer">Ответ</string>
+    <string name="searchDB">Поиск по БД</string>
     
 </resources>

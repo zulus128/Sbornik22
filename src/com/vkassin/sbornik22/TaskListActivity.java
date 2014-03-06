@@ -16,47 +16,77 @@ public class TaskListActivity extends Activity {
 
 	private ListView list;
 	private TaskArrayAdapter adapter;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tasklist_activity);
-		
+
 		TextView title = (TextView) this.findViewById(R.id.TaskListTitle01);
 		title.setText(Common.secondListTitle);
-		
+
 		list = (ListView) this.findViewById(R.id.TaskList);
 		ArrayList<TaskItem> filteredTasks = new ArrayList<TaskItem>();
-		for (Iterator<TaskItem> it=Common.tasks.iterator(); it.hasNext();) {
-			
+		for (Iterator<TaskItem> it = Common.tasks.iterator(); it.hasNext();) {
+
 			TaskItem task = it.next();
-			if((task.section == Common.curRazdel) || (Common.curRazdel == 1))
-				filteredTasks.add(task);
+			if(!Common.isSearch) {
+				
+				if ((task.section == Common.curRazdel) || (Common.curRazdel == 1))
+					filteredTasks.add(task);
+			}
+			else {
+				
+				if(task.name.toLowerCase().contains(Common.secondListTitle.toLowerCase()))
+					filteredTasks.add(task);
+				else
+					if(task.text.toLowerCase().contains(Common.secondListTitle.toLowerCase()))
+						filteredTasks.add(task);
+					else
+						if(task.picsign.toLowerCase().contains(Common.secondListTitle.toLowerCase()))
+							filteredTasks.add(task);
+						else
+							if(task.answer.toLowerCase().contains(Common.secondListTitle.toLowerCase()))
+								filteredTasks.add(task);
+
+			}
 		}
-		adapter = new TaskArrayAdapter(this, R.layout.tasklist_item, filteredTasks);
+		
+		Common.filteredTasks = filteredTasks;
+		adapter = new TaskArrayAdapter(this, R.layout.tasklist_item,
+				filteredTasks);
 		list.setAdapter(adapter);
 
 		list.setOnItemClickListener(new OnItemClickListener() {
 
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-				
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+
 				Common.curTask = adapter.getItems().get(arg2).getId();
-				Intent i = new Intent(TaskListActivity.this, DetailTaskActivity.class);
+				Intent i = new Intent(TaskListActivity.this,
+						DetailTaskActivity.class);
 				startActivity(i);
 
 			}
 		});
 	}
-	
+
 	public void goToFavourites(View view) {
-	    // Do something in response to button click
+		// Do something in response to button click
 	}
+
 	public void goToSearch(View view) {
-	    // Do something in response to button click
+
+		Intent i = new Intent(TaskListActivity.this, SearchActivity.class);
+		startActivity(i);
 	}
+
 	public void goToOglav(View view) {
-	    // Do something in response to button click
+		
+		Intent i = new Intent(TaskListActivity.this, RazdelListActivity.class);
+		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		startActivity(i);
 	}
 
 }

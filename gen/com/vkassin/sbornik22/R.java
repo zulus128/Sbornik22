@@ -228,25 +228,25 @@ public final class R {
         public static final int LinLayout_detailTask02=0x7f090013;
         public static final int LinLayout_razdel01=0x7f09001b;
         public static final int LinLayout_razdelTask01=0x7f090015;
-        public static final int LinLayout_task01=0x7f090023;
+        public static final int LinLayout_task01=0x7f090024;
         public static final int PictureTaskId=0x7f090003;
         public static final int PictureTaskTitle=0x7f090004;
         public static final int PictureTextView=0x7f090006;
         public static final int RazdelList=0x7f09001c;
         public static final int RazdelNameTextView=0x7f09001e;
         public static final int RazdelTextView=0x7f09001f;
-        public static final int RelLayout_TaskItem01=0x7f090025;
-        public static final int RelLayout_TaskList01=0x7f090020;
+        public static final int RelLayout_TaskItem01=0x7f090026;
+        public static final int RelLayout_TaskList01=0x7f090021;
         public static final int RelLayout_detailTask00=0x7f09000e;
         public static final int RelLayout_detailTask01=0x7f09000f;
         public static final int RelLayout_picture00=0x7f090000;
         public static final int RelLayout_picture01=0x7f090001;
-        public static final int TaskList=0x7f090024;
-        public static final int TaskListTitle01=0x7f090021;
-        public static final int TaskNameTextView=0x7f090026;
-        public static final int TaskTextView=0x7f090028;
-        public static final int action_search=0x7f09002a;
-        public static final int action_settings=0x7f090029;
+        public static final int TaskList=0x7f090025;
+        public static final int TaskListTitle01=0x7f090022;
+        public static final int TaskNameTextView=0x7f090027;
+        public static final int TaskTextView=0x7f090029;
+        public static final int action_search=0x7f09002b;
+        public static final int action_settings=0x7f09002a;
         public static final int button_answer=0x7f09000b;
         public static final int button_fav=0x7f090018;
         public static final int button_friends=0x7f090009;
@@ -254,16 +254,17 @@ public final class R {
         public static final int button_left=0x7f090008;
         public static final int button_my=0x7f09000c;
         public static final int button_networks=0x7f09001a;
-        public static final int button_oglav=0x7f090022;
+        public static final int button_oglav=0x7f090023;
         public static final int button_pic=0x7f09000a;
         public static final int button_right=0x7f09000d;
         public static final int button_search=0x7f090019;
         public static final int imageId=0x7f090002;
         public static final int imageMy=0x7f090005;
-        public static final int imageMy1=0x7f090027;
+        public static final int imageMy1=0x7f090028;
         public static final int imagePicture=0x7f090014;
         public static final int imageTitle=0x7f090016;
         public static final int razdelImageT=0x7f09001d;
+        public static final int topic=0x7f090020;
     }
     public static final class layout {
         public static final int answer_activity=0x7f030000;
@@ -280,6 +281,7 @@ public final class R {
         public static final int razdel_activity_actions=0x7f080001;
     }
     public static final class string {
+        public static final int OK=0x7f06000c;
         public static final int action_settings=0x7f060001;
         public static final int answer=0x7f060009;
         public static final int app_name=0x7f060000;
@@ -291,6 +293,7 @@ public final class R {
         public static final int hello_world=0x7f060002;
         public static final int searchDB=0x7f06000a;
         public static final int title_label=0x7f060003;
+        public static final int topic_hint=0x7f06000b;
     }
     public static final class style {
         /** 

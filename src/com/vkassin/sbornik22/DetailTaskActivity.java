@@ -43,10 +43,24 @@ public class DetailTaskActivity extends Activity {
 		Intent i = new Intent(DetailTaskActivity.this, PictureActivity.class);
 		startActivity(i);
 	}
-	
+
 	public void goAnswer(View view) {
 
 		Intent i = new Intent(DetailTaskActivity.this, AnswerActivity.class);
 		startActivity(i);
 	}
+
+	public void goBack(View view) {
+
+		super.onBackPressed();
+	}
+
+	public void goForward(View view) {
+
+		Common.setNextTask();
+		Intent i = new Intent(DetailTaskActivity.this, DetailTaskActivity.class);
+//		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		startActivity(i);
+	}
+
 }

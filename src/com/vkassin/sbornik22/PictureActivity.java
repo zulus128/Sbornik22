@@ -42,4 +42,16 @@ public class PictureActivity extends Activity  {
 		startActivity(i);
 	}
 
+	public void goBack(View view) {
+
+		super.onBackPressed();
+	}
+	
+	public void goForward(View view) {
+
+		Common.setNextTask();
+		Intent i = new Intent(PictureActivity.this, DetailTaskActivity.class);
+//		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		startActivity(i);
+	}
 }

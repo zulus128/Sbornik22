@@ -21,8 +21,10 @@ public class Common {
 
 	public static ArrayList<RazdelItem> razdels;
 	public static ArrayList<TaskItem> tasks;
+	public static ArrayList<TaskItem> filteredTasks;
 	public static Context app_ctx;
 	public static String secondListTitle;
+	public static Boolean isSearch;
 
 	public final static String JSON_TASK_TAG_ID = "id";
 	public final static String JSON_TASK_TAG_ORDER = "order";
@@ -45,30 +47,46 @@ public class Common {
 
 	public static int curRazdel;
 	public static int curTask;
-	
+
+	public static void setNextTask() {
+
+		for (Iterator<TaskItem> it = filteredTasks.iterator(); it.hasNext();) {
+
+			TaskItem task = it.next();
+			if(task.getId() == curTask) {
+				
+				if(it.hasNext())
+					curTask = it.next().getId();
+				break;
+			}
+		}
+	}
+
 	public static void loadDatabase() {
-		
+
 		AssetManager assetManager = app_ctx.getAssets();
-	    InputStream input;
+		InputStream input;
 		try {
 			tasks = new ArrayList<TaskItem>();
 			input = assetManager.open("task.json");
-		    int size = input.available();
-	        byte[] buffer = new byte[size];
-	        input.read(buffer);
-	        input.close();
-	        String s = new String(buffer);
-//	        Log.i(TAG, "s = " + s);
-		    JSONArray tr = new JSONArray(s);
-		    
-		    
+			int size = input.available();
+			byte[] buffer = new byte[size];
+			input.read(buffer);
+			input.close();
+			String s = new String(buffer);
+			// Log.i(TAG, "s = " + s);
+			JSONArray tr = new JSONArray(s);
+
 			for (int i = 0; i < tr.length(); i++) {
 
 				JSONObject row = tr.getJSONObject(i);
 				TaskItem ri = new TaskItem(row.getInt(JSON_TASK_TAG_ID));
 				ri.order = row.getInt(JSON_TASK_TAG_ID);
 				ri.section = row.getInt(JSON_TASK_TAG_SECTION);
-				try{ ri.lock = row.getInt(JSON_TASK_TAG_LOCK); } catch (Exception e) {}
+				try {
+					ri.lock = row.getInt(JSON_TASK_TAG_LOCK);
+				} catch (Exception e) {
+				}
 				ri.text = row.getString(JSON_TASK_TAG_TEXT);
 				ri.name = row.getString(JSON_TASK_TAG_NAME);
 				ri.answer = row.getString(JSON_TASK_TAG_ANSWER);
@@ -76,17 +94,17 @@ public class Common {
 				ri.pic = row.getString(JSON_TASK_TAG_PIC);
 				ri.picsign = row.getString(JSON_TASK_TAG_PICSIGN);
 				tasks.add(ri);
-//				Log.i(TAG, "row = " + row);
+				// Log.i(TAG, "row = " + row);
 			}
 
 			razdels = new ArrayList<RazdelItem>();
 			input = assetManager.open("razdel.json");
-		    size = input.available();
-	        buffer = new byte[size];
-	        input.read(buffer);
-	        input.close();
-	        s = new String(buffer);
-		    JSONArray jr = new JSONArray(s);
+			size = input.available();
+			buffer = new byte[size];
+			input.read(buffer);
+			input.close();
+			s = new String(buffer);
+			JSONArray jr = new JSONArray(s);
 			for (int i = 0; i < jr.length(); i++) {
 
 				JSONObject row = jr.getJSONObject(i);
@@ -98,25 +116,27 @@ public class Common {
 				ri.name = row.getString(JSON_RAZDEL_TAG_NAME);
 				ri.icon = row.getString(JSON_RAZDEL_TAG_ICON);
 				razdels.add(ri);
-//				Log.i(TAG, "row = " + row);
+				// Log.i(TAG, "row = " + row);
 			}
 
 			Collections.sort(tasks, new Comparator<TaskItem>() {
-			    
+
 				public int compare(TaskItem a, TaskItem b) {
-			    	
-			        return Integer.valueOf(a.order).compareTo(Integer.valueOf(b.order));
-			    }
+
+					return Integer.valueOf(a.order).compareTo(
+							Integer.valueOf(b.order));
+				}
 			});
-			
+
 			Collections.sort(razdels, new Comparator<RazdelItem>() {
-			    
+
 				public int compare(RazdelItem a, RazdelItem b) {
-			    	
-			        return Integer.valueOf(a.order).compareTo(Integer.valueOf(b.order));
-			    }
+
+					return Integer.valueOf(a.order).compareTo(
+							Integer.valueOf(b.order));
+				}
 			});
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -126,20 +146,20 @@ public class Common {
 		}
 
 	}
-	
+
 	public static TaskItem getCurTask() {
-		
+
 		TaskItem res = null;
-		for (Iterator<TaskItem> it=Common.tasks.iterator(); it.hasNext();) {
-		
+		for (Iterator<TaskItem> it = Common.tasks.iterator(); it.hasNext();) {
+
 			TaskItem ti = it.next();
-			if(ti.getId() == curTask) {
-				
-				res =ti;
+			if (ti.getId() == curTask) {
+
+				res = ti;
 				break;
 			}
 		}
-		
+
 		return res;
 	}
 }

@@ -36,4 +36,17 @@ public class AnswerActivity extends Activity {
 		Intent i = new Intent(AnswerActivity.this, PictureActivity.class);
 		startActivity(i);
 	}
+	
+	public void goBack(View view) {
+
+		super.onBackPressed();
+	}
+	
+	public void goForward(View view) {
+
+		Common.setNextTask();
+		Intent i = new Intent(AnswerActivity.this, DetailTaskActivity.class);
+//		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		startActivity(i);
+	}
 }

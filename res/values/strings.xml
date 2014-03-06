@@ -12,5 +12,7 @@
     <string name="buttitle_oglav">Content</string>
     <string name="answer">Ответ</string>
     <string name="searchDB">Поиск по БД</string>
+    <string name="topic_hint">Введите фразу</string>
+    <string name="OK">OK</string>
     
 </resources>

@@ -56,33 +56,39 @@
             android:src="@drawable/my33" />
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/LinLayout_detailTask02"
+    <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/RelLayout_picture00"
-        android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:layout_marginBottom="45sp" >
 
-        <ImageView
-            android:id="@+id/imagePicture"
+        <LinearLayout
+            android:id="@+id/LinLayout_detailTask02"
             android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5" />
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/PictureTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:paddingBottom="@dimen/bottompanel_vertical_margin"
-            android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-            android:paddingRight="@dimen/bottompanel_horizontal_margin"
-            android:paddingTop="@dimen/bottompanel_vertical_margin"
-            android:textColor="@color/Black"
-            android:textSize="18sp" >
-        </TextView>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imagePicture"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:id="@+id/PictureTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:paddingBottom="@dimen/bottompanel_vertical_margin"
+                android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+                android:paddingRight="@dimen/bottompanel_horizontal_margin"
+                android:paddingTop="@dimen/bottompanel_vertical_margin"
+                android:textColor="@color/Black"
+                android:textSize="18sp" >
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/LinLayout_detailTask01"

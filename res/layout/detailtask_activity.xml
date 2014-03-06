@@ -56,18 +56,25 @@
             android:src="@drawable/my33" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/DetailTaskTextView"
+    <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/RelLayout_detailTask00"
-        android:paddingBottom="@dimen/bottompanel_vertical_margin"
-        android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-        android:paddingRight="@dimen/bottompanel_horizontal_margin"
-        android:paddingTop="@dimen/bottompanel_vertical_margin"
-        android:textColor="@color/Black"
-        android:textSize="18sp" >
-    </TextView>
+        android:layout_below="@+id/RelLayout_detailTask00" 
+        android:layout_marginBottom="45sp"
+        >
+
+        <TextView
+            android:id="@+id/DetailTaskTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/bottompanel_vertical_margin"
+            android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+            android:paddingRight="@dimen/bottompanel_horizontal_margin"
+            android:paddingTop="@dimen/bottompanel_vertical_margin"
+            android:textColor="@color/Black"
+            android:textSize="18sp" >
+        </TextView>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/LinLayout_detailTask01"

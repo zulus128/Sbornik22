@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
@@ -17,25 +18,29 @@ public class DetailTaskActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.detailtask_activity);
-		
-		TextView tv = (TextView) this.findViewById(R.id.DetailTaskTextView);
-		TaskItem ti = Common.getCurTask();
-		tv.setText(ti.text);
-		
-//		getActionBar().setTitle("Hello world App");
 
-//		Button button = (Button) findViewById(R.id.button_pic);
-//		button.setOnClickListener(new View.OnClickListener() {
-//		    public void onClick(View v) {
-//		        // Do something in response to button click
-//		    }
-//		});
+		TaskItem ti = Common.getCurTask();
+
+		TextView tv = (TextView) this.findViewById(R.id.DetailTaskTextView);
+		tv.setText(ti.text);
+
+		TextView title = (TextView) this.findViewById(R.id.DetailTaskTitle);
+		title.setText(ti.name);
+
+		ImageView imgMy1 = (ImageView) this.findViewById(R.id.imageMy);
+		imgMy1.setVisibility((ti.my1 == 1) ? View.VISIBLE : View.GONE);
+
+		TextView idd = (TextView) this.findViewById(R.id.DetailTaskId);
+		idd.setText("" + ti.getId());
+
 	}
-	
+
 	public void goToPic(View view) {
-	    // Do something in response to button click
+
+		Intent i = new Intent(DetailTaskActivity.this, PictureActivity.class);
+		startActivity(i);
 	}
 }

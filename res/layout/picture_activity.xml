@@ -5,14 +5,14 @@
     tools:context=".TaskListActivity" >
 
     <RelativeLayout
-        android:id="@+id/RelLayout_detailTask00"
+        android:id="@+id/RelLayout_picture00"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@color/Gray" >
 
         <RelativeLayout
-            android:id="@+id/RelLayout_detailTask01"
+            android:id="@+id/RelLayout_picture01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -28,7 +28,7 @@
                 android:src="@drawable/id" />
 
             <TextView
-                android:id="@+id/DetailTaskId"
+                android:id="@+id/PictureTaskId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -38,7 +38,7 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/DetailTaskTitle"
+            android:id="@+id/PictureTaskTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -56,18 +56,33 @@
             android:src="@drawable/my33" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/DetailTaskTextView"
+    <LinearLayout
+        android:id="@+id/LinLayout_detailTask02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/RelLayout_detailTask00"
-        android:paddingBottom="@dimen/bottompanel_vertical_margin"
-        android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-        android:paddingRight="@dimen/bottompanel_horizontal_margin"
-        android:paddingTop="@dimen/bottompanel_vertical_margin"
-        android:textColor="@color/Black"
-        android:textSize="18sp" >
-    </TextView>
+        android:layout_below="@+id/RelLayout_picture00"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imagePicture"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
+
+        <TextView
+            android:id="@+id/PictureTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:paddingBottom="@dimen/bottompanel_vertical_margin"
+            android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+            android:paddingRight="@dimen/bottompanel_horizontal_margin"
+            android:paddingTop="@dimen/bottompanel_vertical_margin"
+            android:textColor="@color/Black"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LinLayout_detailTask01"
@@ -109,8 +124,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="2sp"
             android:layout_marginRight="2sp"
-            android:background="@drawable/button_pic1_custom"
-            android:onClick="goToPic"
+            android:background="@drawable/pic2"
             android:scaleType="fitXY" />
 
         <ImageButton

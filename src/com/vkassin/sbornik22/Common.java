@@ -48,18 +48,23 @@ public class Common {
 	public static int curRazdel;
 	public static int curTask;
 
-	public static void setNextTask() {
+	public static boolean setNextTask() {
 
 		for (Iterator<TaskItem> it = filteredTasks.iterator(); it.hasNext();) {
 
 			TaskItem task = it.next();
 			if(task.getId() == curTask) {
 				
-				if(it.hasNext())
+				if(it.hasNext()) {
+				
 					curTask = it.next().getId();
-				break;
+					return true;
+				}
+				return false;
 			}
 		}
+		
+		return false;
 	}
 
 	public static void loadDatabase() {

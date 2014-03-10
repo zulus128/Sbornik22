@@ -42,11 +42,27 @@ public class AnswerActivity extends Activity {
 		super.onBackPressed();
 	}
 	
+//	public void goForward(View view) {
+//
+//		Common.setNextTask();
+//		Intent i = new Intent(AnswerActivity.this, DetailTaskActivity.class);
+////		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//		startActivity(i);
+//	}
+	
 	public void goForward(View view) {
 
-		Common.setNextTask();
-		Intent i = new Intent(AnswerActivity.this, DetailTaskActivity.class);
-//		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		boolean b = Common.setNextTask();
+		Intent i;
+		if(b) {
+			
+			i = new Intent(AnswerActivity.this, DetailTaskActivity.class);
+		}else {
+			
+			i = new Intent(AnswerActivity.this, RazdelListActivity.class);
+			i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		}
 		startActivity(i);
 	}
+
 }

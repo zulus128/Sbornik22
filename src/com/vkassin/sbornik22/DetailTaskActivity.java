@@ -57,9 +57,16 @@ public class DetailTaskActivity extends Activity {
 
 	public void goForward(View view) {
 
-		Common.setNextTask();
-		Intent i = new Intent(DetailTaskActivity.this, DetailTaskActivity.class);
-//		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		boolean b = Common.setNextTask();
+		Intent i;
+		if(b) {
+			
+			i = new Intent(DetailTaskActivity.this, DetailTaskActivity.class);
+		}else {
+			
+			i = new Intent(DetailTaskActivity.this, RazdelListActivity.class);
+			i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		}
 		startActivity(i);
 	}
 

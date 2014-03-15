@@ -108,7 +108,11 @@ public final class R {
         public static final int MistyRose=0x7f04000c;
         public static final int Moccasin=0x7f04000e;
         public static final int MyBlue=0x7f04008c;
+        public static final int MyDarkGray=0x7f04008f;
+        public static final int MyDottedGray=0x7f040091;
+        public static final int MyGray=0x7f04008e;
         public static final int MyLightBlue=0x7f04008d;
+        public static final int MyOrange=0x7f040090;
         public static final int NavajoWhite=0x7f04000f;
         public static final int Navy=0x7f04008a;
         public static final int OldLace=0x7f04001f;
@@ -178,49 +182,65 @@ public final class R {
         public static final int ansver2=0x7f020001;
         public static final int bg=0x7f020002;
         public static final int button_pic1_custom=0x7f020003;
-        public static final int dotted=0x7f020004;
-        public static final int fig_1=0x7f020005;
-        public static final int fig_2=0x7f020006;
-        public static final int fig_3=0x7f020007;
-        public static final int fig_4=0x7f020008;
-        public static final int fig_5=0x7f020009;
-        public static final int fig_6=0x7f02000a;
-        public static final int fig_7=0x7f02000b;
-        public static final int friend=0x7f02000c;
-        public static final int friend2=0x7f02000d;
-        public static final int galka=0x7f02000e;
-        public static final int ic_launcher=0x7f02000f;
-        public static final int icon_01=0x7f020010;
-        public static final int icon_02=0x7f020011;
-        public static final int icon_03=0x7f020012;
-        public static final int icon_04=0x7f020013;
-        public static final int icon_05=0x7f020014;
-        public static final int icon_06=0x7f020015;
-        public static final int icon_07=0x7f020016;
-        public static final int icon_08=0x7f020017;
-        public static final int id=0x7f020018;
-        public static final int info=0x7f020019;
-        public static final int left=0x7f02001a;
-        public static final int list=0x7f02001b;
-        public static final int lock=0x7f02001c;
-        public static final int my=0x7f02001d;
-        public static final int my1=0x7f02001e;
-        public static final int my2=0x7f02001f;
-        public static final int my21=0x7f020020;
-        public static final int my33=0x7f020021;
-        public static final int pic1=0x7f020022;
-        public static final int pic2=0x7f020023;
-        public static final int pic_1=0x7f020024;
-        public static final int pic_2=0x7f020025;
-        public static final int pic_3=0x7f020026;
-        public static final int pic_4=0x7f020027;
-        public static final int pic_5=0x7f020028;
-        public static final int pic_6=0x7f020029;
-        public static final int pic_7=0x7f02002a;
-        public static final int pic_8=0x7f02002b;
-        public static final int refresh=0x7f02002c;
-        public static final int rigth=0x7f02002d;
-        public static final int search=0x7f02002e;
+        public static final int dicon_01=0x7f020004;
+        public static final int dicon_02=0x7f020005;
+        public static final int dicon_03=0x7f020006;
+        public static final int dicon_04=0x7f020007;
+        public static final int dicon_05=0x7f020008;
+        public static final int dicon_06=0x7f020009;
+        public static final int dicon_07=0x7f02000a;
+        public static final int dicon_08=0x7f02000b;
+        public static final int dicon_09=0x7f02000c;
+        public static final int dicon_10=0x7f02000d;
+        public static final int dicon_11=0x7f02000e;
+        public static final int dicon_12=0x7f02000f;
+        public static final int dotted=0x7f020010;
+        public static final int fig_1=0x7f020011;
+        public static final int fig_2=0x7f020012;
+        public static final int fig_3=0x7f020013;
+        public static final int fig_4=0x7f020014;
+        public static final int fig_5=0x7f020015;
+        public static final int fig_6=0x7f020016;
+        public static final int fig_7=0x7f020017;
+        public static final int friend=0x7f020018;
+        public static final int friend2=0x7f020019;
+        public static final int galka=0x7f02001a;
+        public static final int ic_launcher=0x7f02001b;
+        public static final int icon_01=0x7f02001c;
+        public static final int icon_02=0x7f02001d;
+        public static final int icon_03=0x7f02001e;
+        public static final int icon_04=0x7f02001f;
+        public static final int icon_05=0x7f020020;
+        public static final int icon_06=0x7f020021;
+        public static final int icon_07=0x7f020022;
+        public static final int icon_08=0x7f020023;
+        public static final int id=0x7f020024;
+        public static final int info=0x7f020025;
+        public static final int left=0x7f020026;
+        public static final int list=0x7f020027;
+        public static final int list_selector=0x7f020028;
+        public static final int lock=0x7f020029;
+        public static final int my=0x7f02002a;
+        public static final int my1=0x7f02002b;
+        public static final int my2=0x7f02002c;
+        public static final int my21=0x7f02002d;
+        public static final int my33=0x7f02002e;
+        public static final int okno_0=0x7f02002f;
+        public static final int panel_niz=0x7f020030;
+        public static final int panel_verh=0x7f020031;
+        public static final int pic1=0x7f020032;
+        public static final int pic2=0x7f020033;
+        public static final int pic_1=0x7f020034;
+        public static final int pic_2=0x7f020035;
+        public static final int pic_3=0x7f020036;
+        public static final int pic_4=0x7f020037;
+        public static final int pic_5=0x7f020038;
+        public static final int pic_6=0x7f020039;
+        public static final int pic_7=0x7f02003a;
+        public static final int pic_8=0x7f02003b;
+        public static final int refresh=0x7f02003c;
+        public static final int rigth=0x7f02003d;
+        public static final int search=0x7f02003e;
     }
     public static final class id {
         public static final int DetailTaskId=0x7f090010;
@@ -228,27 +248,28 @@ public final class R {
         public static final int DetailTaskTitle=0x7f090011;
         public static final int LinLayout_detailTask01=0x7f090007;
         public static final int LinLayout_detailTask02=0x7f090013;
-        public static final int LinLayout_razdel01=0x7f09001b;
-        public static final int LinLayout_razdelTask01=0x7f090015;
-        public static final int LinLayout_task01=0x7f090024;
+        public static final int LinLayout_razdel000=0x7f09001b;
+        public static final int LinLayout_razdel01=0x7f09001d;
+        public static final int LinLayout_task01=0x7f090026;
         public static final int PictureTaskId=0x7f090003;
         public static final int PictureTaskTitle=0x7f090004;
         public static final int PictureTextView=0x7f090006;
-        public static final int RazdelList=0x7f09001c;
-        public static final int RazdelNameTextView=0x7f09001e;
-        public static final int RazdelTextView=0x7f09001f;
-        public static final int RelLayout_TaskItem01=0x7f090026;
-        public static final int RelLayout_TaskList01=0x7f090021;
+        public static final int RazdelList=0x7f09001e;
+        public static final int RazdelNameTextView=0x7f090020;
+        public static final int RazdelTextView=0x7f090021;
+        public static final int RelLayout_TaskItem01=0x7f090028;
+        public static final int RelLayout_TaskList01=0x7f090023;
         public static final int RelLayout_detailTask00=0x7f09000e;
         public static final int RelLayout_detailTask01=0x7f09000f;
         public static final int RelLayout_picture00=0x7f090000;
         public static final int RelLayout_picture01=0x7f090001;
-        public static final int TaskList=0x7f090025;
-        public static final int TaskListTitle01=0x7f090022;
-        public static final int TaskNameTextView=0x7f090027;
-        public static final int TaskTextView=0x7f090029;
-        public static final int action_search=0x7f09002b;
-        public static final int action_settings=0x7f09002a;
+        public static final int RelLayout_razdelTask01=0x7f090015;
+        public static final int TaskList=0x7f090027;
+        public static final int TaskListTitle01=0x7f090024;
+        public static final int TaskNameTextView=0x7f090029;
+        public static final int TaskTextView=0x7f09002b;
+        public static final int action_search=0x7f09002d;
+        public static final int action_settings=0x7f09002c;
         public static final int button_answer=0x7f09000b;
         public static final int button_fav=0x7f090018;
         public static final int button_friends=0x7f090009;
@@ -256,17 +277,18 @@ public final class R {
         public static final int button_left=0x7f090008;
         public static final int button_my=0x7f09000c;
         public static final int button_networks=0x7f09001a;
-        public static final int button_oglav=0x7f090023;
+        public static final int button_oglav=0x7f090025;
         public static final int button_pic=0x7f09000a;
         public static final int button_right=0x7f09000d;
         public static final int button_search=0x7f090019;
+        public static final int first_screen_title=0x7f09001c;
         public static final int imageId=0x7f090002;
         public static final int imageMy=0x7f090005;
-        public static final int imageMy1=0x7f090028;
+        public static final int imageMy1=0x7f09002a;
         public static final int imagePicture=0x7f090014;
         public static final int imageTitle=0x7f090016;
-        public static final int razdelImageT=0x7f09001d;
-        public static final int topic=0x7f090020;
+        public static final int razdelImageT=0x7f09001f;
+        public static final int topic=0x7f090022;
     }
     public static final class layout {
         public static final int answer_activity=0x7f030000;
@@ -301,11 +323,13 @@ public final class R {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
          */
         public static final int AppBaseTheme=0x7f070000;
@@ -313,5 +337,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int splashScreenTheme=0x7f070002;
     }
 }

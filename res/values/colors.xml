@@ -145,5 +145,9 @@
     <color name="Black">#000000</color>
     <color name="MyBlue">#176584</color>
     <color name="MyLightBlue">#DEE4E5</color>
+    <color name="MyGray">#E7E6E5</color>
+    <color name="MyDarkGray">#505050</color>
+    <color name="MyOrange">#F15A29</color>
+    <color name="MyDottedGray">#969696</color>
     
 </resources>

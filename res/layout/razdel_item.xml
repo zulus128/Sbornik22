@@ -4,25 +4,27 @@
     android:layout_height="wrap_content"
     android:background="@android:color/transparent"
     android:orientation="horizontal"
-    android:paddingLeft="3dp" >
+    android:paddingTop="13dp"
+    android:paddingBottom="13dp"
+    android:paddingLeft="13dp" >
 
     <ImageView
         android:id="@+id/razdelImageT"
-        android:layout_width="40sp"
-        android:layout_height="40sp" />
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/razdelcell_horizontal_margin" >
+        android:paddingLeft="13dp" >
 
         <TextView
             android:id="@+id/RazdelNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/Black"
+            android:textColor="@color/MyDarkGray"
             android:textSize="15sp"
             android:textStyle="bold" >
         </TextView>
@@ -40,8 +42,7 @@
             android:layout_height="wrap_content"
             android:maxLines="2"
             android:minLines="2"
-            android:paddingLeft="@dimen/razdelcellsubtitle_horizontal_margin"
-            android:textColor="@color/Black"
+            android:textColor="@color/MyDarkGray"
             android:textSize="12sp" >
         </TextView>
     </LinearLayout>

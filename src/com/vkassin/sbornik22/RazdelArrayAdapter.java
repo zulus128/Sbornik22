@@ -3,6 +3,7 @@ package com.vkassin.sbornik22;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,12 +39,19 @@ public class RazdelArrayAdapter extends ArrayAdapter<RazdelItem> {
 		RazdelItem item = getItems().get(position);
 		if (item != null) {
 
+			
 			TextView title = (TextView) convertView
 					.findViewById(R.id.RazdelNameTextView);
+			Typeface tf = Typeface.createFromAsset(ctx.getAssets(), "fonts/GothaProMed.otf");
+			title.setTypeface(tf);
+
 			TextView text = (TextView) convertView
 					.findViewById(R.id.RazdelTextView);
+			tf = Typeface.createFromAsset(ctx.getAssets(), "fonts/GothaProReg.otf");
+			text.setTypeface(tf);
 
-			title.setText("" + (item.getId() - 0) +". " + item.name);
+//			title.setText("" + (item.getId() - 0) +". " + item.name);
+			title.setText(item.name);
 			text.setText(item.text);
 
 			ImageView imgView = (ImageView) convertView.findViewById(R.id.razdelImageT);

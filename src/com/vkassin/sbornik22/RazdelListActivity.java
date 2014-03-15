@@ -2,6 +2,7 @@ package com.vkassin.sbornik22;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
 
 public class RazdelListActivity extends Activity {
 
@@ -22,11 +24,12 @@ public class RazdelListActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 
-		// requestWindowFeature(Window.FEATURE_NO_TITLE);
-		// getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 		setContentView(R.layout.razdel_activity);
 
+		TextView text = (TextView) findViewById(R.id.first_screen_title);
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/GothaProReg.otf");
+		text.setTypeface(tf);
+		
 		Common.app_ctx = getApplicationContext();
 		Common.loadDatabase();
 

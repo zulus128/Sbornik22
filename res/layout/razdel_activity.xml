@@ -94,8 +94,10 @@
             android:layout_height="wrap_content"
             android:cacheColorHint="@android:color/transparent"
             android:choiceMode="singleChoice"
+            android:divider="@drawable/dotted"
             android:footerDividersEnabled="true"
             android:headerDividersEnabled="true"
+            android:dividerHeight="2dp"
             android:paddingBottom="5dp"
             android:paddingTop="0dp" >
         </ListView>

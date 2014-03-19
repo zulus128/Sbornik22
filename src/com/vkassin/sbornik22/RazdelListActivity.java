@@ -44,8 +44,9 @@ public class RazdelListActivity extends Activity {
 					long arg3) {
 
 				Common.curRazdel = adapter.getItems().get(arg2).getId();
-				Common.secondListTitle = "БЭГ. " + Common.curRazdel + ". "
-						+ adapter.getItems().get(arg2).name;
+//				Common.secondListTitle = "БЭГ. " + Common.curRazdel + ". "
+//				+ adapter.getItems().get(arg2).name;
+				Common.secondListTitle = "БЭГ / " + adapter.getItems().get(arg2).name;
 				Common.isSearch = false;
 				Intent i = new Intent(RazdelListActivity.this, TaskListActivity.class);
 				startActivity(i);

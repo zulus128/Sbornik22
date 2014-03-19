@@ -3,6 +3,7 @@ package com.vkassin.sbornik22;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,13 +35,21 @@ public class TaskArrayAdapter extends ArrayAdapter<TaskItem> {
     	if (item != null) {
     		
     		TextView title = (TextView) convertView.findViewById(R.id.TaskNameTextView);
-    		TextView text = (TextView) convertView.findViewById(R.id.TaskTextView);
-    		
+			Typeface tf = Typeface.createFromAsset(ctx.getAssets(), "fonts/GothaProMed.otf");
+			title.setTypeface(tf);
     		title.setText(item.name);
+
+    		TextView text = (TextView) convertView.findViewById(R.id.TaskTextView);
+    		Typeface tf1 = Typeface.createFromAsset(ctx.getAssets(), "fonts/GothaProReg.otf");
+			text.setTypeface(tf1);
     		text.setText(item.text);
     		
-			ImageView imgMy1 = (ImageView) convertView.findViewById(R.id.imageMy1);
-			imgMy1.setVisibility((item.my1 == 1)?View.VISIBLE:View.GONE);
+    		TextView number = (TextView) convertView.findViewById(R.id.TaskNumberTextView);
+			number.setTypeface(tf);
+    		number.setText("" + item.getId());
+
+//			ImageView imgMy1 = (ImageView) convertView.findViewById(R.id.imageMy1);
+//			imgMy1.setVisibility((item.my1 == 1)?View.VISIBLE:View.GONE);
 
     	}
     	

@@ -78,7 +78,7 @@
         android:paddingTop="@dimen/bottompanel_vertical_margin" >
 
         <TextView
-            android:id="@+id/first_screen_title"
+            android:id="@+id/TaskListTitle01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_label"
@@ -100,8 +100,10 @@
             android:layout_height="wrap_content"
             android:cacheColorHint="@android:color/transparent"
             android:choiceMode="singleChoice"
+            android:divider="@drawable/orangeline"
             android:footerDividersEnabled="true"
             android:headerDividersEnabled="true"
+            android:listSelector="@drawable/list_selector"
             android:paddingBottom="5dp"
             android:paddingTop="0dp" >
         </ListView>

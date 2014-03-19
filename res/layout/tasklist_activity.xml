@@ -5,70 +5,93 @@
     tools:context=".TaskListActivity" >
 
     <RelativeLayout
-        android:id="@+id/RelLayout_TaskList01"
+        android:id="@+id/RelLayout_TasList01"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/MyBlue"
-        android:orientation="horizontal"
+        android:background="@drawable/panel_verh"
         android:paddingBottom="@dimen/bottompanel_vertical_margin"
         android:paddingLeft="@dimen/bottompanel_horizontal_margin"
         android:paddingRight="@dimen/bottompanel_horizontal_margin"
         android:paddingTop="@dimen/bottompanel_vertical_margin" >
 
-        <TextView
-            android:id="@+id/TaskListTitle01"
+        <ImageView
+            android:id="@+id/imageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:paddingLeft="10sp"
-            android:paddingTop="10sp"
-            android:text="@string/title_label"
-            android:textColor="@color/White"
-            android:textStyle="bold" />
+            android:src="@drawable/dicon_05" />
 
         <ImageButton
-            android:id="@+id/button_oglav"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
+            android:id="@+id/button_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@drawable/list"
-            android:contentDescription="@string/buttitle_oglav"
-            android:onClick="goToOglav"
-            android:paddingRight="10sp"
-            android:paddingTop="10sp"
+            android:background="@drawable/dicon_01"
+            android:contentDescription="@string/buttitle_info"
+            android:onClick="goToInfo"
+            android:paddingRight="8dp"
             android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/button_fav"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_toLeftOf="@+id/button_oglav"
-            android:background="@drawable/my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_info"
+            android:background="@drawable/dicon_02"
             android:contentDescription="@string/buttitle_fav"
             android:onClick="goToFavourites"
-            android:paddingRight="10sp"
-            android:paddingTop="10sp"
+            android:paddingRight="8dp"
             android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/button_search"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/button_fav"
-            android:background="@drawable/search"
+            android:background="@drawable/dicon_03"
             android:contentDescription="@string/buttitle_search"
             android:onClick="goToSearch"
-            android:paddingRight="10sp"
-            android:paddingTop="10sp"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_search"
+            android:background="@drawable/dicon_04"
+            android:contentDescription="@string/buttitle_netw"
+            android:onClick="goToNetworks"
+            android:paddingRight="8dp"
             android:scaleType="fitXY" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LinLayout_razdel0000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayout_TasList01"
+        android:background="@color/MyDarkGray"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottompanel_vertical_margin"
+        android:paddingTop="@dimen/bottompanel_vertical_margin" >
+
+        <TextView
+            android:id="@+id/first_screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_label"
+            android:textColor="@color/White"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LinLayout_task01"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/RelLayout_TaskList01"
+        android:layout_below="@+id/LinLayout_razdel0000"
         android:orientation="vertical" >
 
         <ListView

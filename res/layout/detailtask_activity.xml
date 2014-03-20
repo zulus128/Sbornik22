@@ -94,29 +94,37 @@
         android:layout_marginBottom="55dp" >
 
         <LinearLayout
-            android:id="@+id/LinLayout_razdel00001"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/LinLayout_TasList015"
             android:orientation="vertical" >
 
             <RelativeLayout
-                android:id="@+id/RelLayout_TasList012"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/DetailNumTextView"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/MyOrange"
+                    android:textSize="15sp" >
+                </TextView>
 
                 <TextView
                     android:id="@+id/DetailNameTextView"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
+                    android:layout_toRightOf="@+id/DetailNumTextView"
                     android:textColor="@color/MyOrange"
-                    android:textSize="18sp" >
+                    android:textSize="15sp" >
                 </TextView>
             </RelativeLayout>
 
             <ImageView
-                android:id="@+id/imageDiv"
+                android:id="@+id/imageDiv1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/dotted1" />
@@ -127,7 +135,7 @@
                 android:layout_height="wrap_content" />
 
             <ImageView
-                android:id="@+id/imageDiv"
+                android:id="@+id/imageDiv2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/dotted1" />
@@ -136,24 +144,24 @@
                 android:id="@+id/DetailTaskPicTextView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/bottompanel_vertical_margin"
-                android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-                android:paddingRight="@dimen/bottompanel_horizontal_margin"
-                android:paddingTop="@dimen/bottompanel_vertical_margin"
-                android:textColor="@color/Black"
-                android:textSize="15sp" >
+                android:paddingBottom="5dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/MyDarkGray"
+                android:textSize="8sp" >
             </TextView>
 
             <TextView
                 android:id="@+id/DetailTaskTextView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/bottompanel_vertical_margin"
-                android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-                android:paddingRight="@dimen/bottompanel_horizontal_margin"
-                android:paddingTop="@dimen/bottompanel_vertical_margin"
-                android:textColor="@color/Black"
-                android:textSize="18sp" >
+                android:paddingBottom="5dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/MyDarkGray"
+                android:textSize="11sp" >
             </TextView>
         </LinearLayout>
     </ScrollView>

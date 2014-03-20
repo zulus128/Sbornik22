@@ -44,6 +44,7 @@ public class RazdelListActivity extends Activity {
 					long arg3) {
 
 				Common.curRazdel = adapter.getItems().get(arg2).getId();
+				Common.curRazdelName = adapter.getItems().get(arg2).name;
 //				Common.secondListTitle = "БЭГ. " + Common.curRazdel + ". "
 //				+ adapter.getItems().get(arg2).name;
 				Common.secondListTitle = "БЭГ / " + adapter.getItems().get(arg2).name;

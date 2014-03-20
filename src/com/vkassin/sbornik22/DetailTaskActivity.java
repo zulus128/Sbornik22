@@ -27,14 +27,14 @@ public class DetailTaskActivity extends Activity {
 		TextView tv = (TextView) this.findViewById(R.id.DetailTaskTextView);
 		tv.setText(ti.text);
 
-		TextView title = (TextView) this.findViewById(R.id.DetailTaskTitle);
-		title.setText(ti.name);
+		TextView title = (TextView) this.findViewById(R.id.DetTaskListTitle01);
+		title.setText("БЭГ / " + Common.curRazdelName + " / ЗАДАЧА № " + ti.getId()); 
 
-		ImageView imgMy1 = (ImageView) this.findViewById(R.id.imageMy);
-		imgMy1.setVisibility((ti.my1 == 1) ? View.VISIBLE : View.GONE);
+//		ImageView imgMy1 = (ImageView) this.findViewById(R.id.imageMy);
+//		imgMy1.setVisibility((ti.my1 == 1) ? View.VISIBLE : View.GONE);
 
-		TextView idd = (TextView) this.findViewById(R.id.DetailTaskId);
-		idd.setText("" + ti.getId());
+		TextView idd = (TextView) this.findViewById(R.id.DetailNameTextView);
+		idd.setText("" + ti.getId() + " " + ti.name);
 
 	}
 

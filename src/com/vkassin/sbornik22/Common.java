@@ -46,6 +46,7 @@ public class Common {
 	public final static String JSON_RAZDEL_TAG_ICON = "icon";
 
 	public static int curRazdel;
+	public static String curRazdelName;
 	public static int curTask;
 
 	public static boolean setNextTask() {

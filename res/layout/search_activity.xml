@@ -5,44 +5,88 @@
     android:background="@color/MyLightBlue"
     tools:context=".TaskListActivity" >
 
-    <RelativeLayout
-        android:id="@+id/RelLayout_picture00"
+      <RelativeLayout
+        android:id="@+id/RelLayout_TasList0123"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/MyBlue" >
+        android:background="@drawable/panel_verh"
+        android:paddingBottom="@dimen/bottompanel_vertical_margin"
+        android:paddingLeft="@dimen/bottompanel_horizontal_margin"
+        android:paddingRight="@dimen/bottompanel_horizontal_margin"
+        android:paddingTop="@dimen/bottompanel_vertical_margin" >
 
         <ImageView
-            android:id="@+id/imageId"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10sp"
-            android:padding="5sp"
-            android:src="@drawable/search" />
-
-        <TextView
-            android:id="@+id/PictureTaskTitle"
+            android:id="@+id/imageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/searchDB"
-            android:textColor="@color/White"
-            android:textSize="18sp" >
-        </TextView>
+            android:src="@drawable/dicon_05" />
 
         <ImageButton
-            android:id="@+id/button_left"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
+            android:id="@+id/button_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="10sp"
-            android:background="@drawable/list"
-            android:onClick="goToOglav"
+            android:background="@drawable/dicon_01"
+            android:contentDescription="@string/buttitle_info"
+            android:onClick="goToInfo"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_info"
+            android:background="@drawable/dicon_02"
+            android:contentDescription="@string/buttitle_fav"
+            android:onClick="goToFavourites"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_fav"
+            android:background="@drawable/dicon_03"
+            android:contentDescription="@string/buttitle_search"
+            android:onClick="goToSearch"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_search"
+            android:background="@drawable/dicon_04"
+            android:contentDescription="@string/buttitle_netw"
+            android:onClick="goToNetworks"
+            android:paddingRight="8dp"
             android:scaleType="fitXY" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LinLayout_razdel0000123"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayout_TasList0123"
+        android:background="@color/MyDarkGray"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottompanel_vertical_margin"
+        android:paddingTop="@dimen/bottompanel_vertical_margin" >
+
+        <TextView
+            android:id="@+id/DetTaskListTitle01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_label"
+            android:textColor="@color/White"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LinLayout_detailTask01"
@@ -50,6 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="60sp"
+        android:layout_below="@+id/LinLayout_razdel0000123"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal" >
 

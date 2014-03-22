@@ -6,6 +6,7 @@ import java.util.Iterator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -14,8 +15,11 @@ import android.widget.TextView;
 
 public class TaskListActivity extends Activity {
 
+	private static final String TAG = "Sbornik.TaskListActivity";
+
 	private ListView list;
 	private TaskArrayAdapter adapter;
+	private Runnable run;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +74,10 @@ public class TaskListActivity extends Activity {
 
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-
+				
+				if(adapter.getItems().get(arg2).lock != 0)
+					return;
+				
 				Common.curTask = adapter.getItems().get(arg2).getId();
 				Intent i = new Intent(TaskListActivity.this,
 						DetailTaskActivity.class);
@@ -78,6 +85,42 @@ public class TaskListActivity extends Activity {
 
 			}
 		});
+		
+		run = new Runnable(){
+            public void run(){
+
+            	adapter.notifyDataSetChanged();
+            	list.invalidateViews();
+            	list.refreshDrawableState();
+            }
+       };
+	}
+
+	@Override
+	protected void onResume() {
+	
+		super.onResume();
+		
+//		Log.i(TAG, "--onResume");
+		runOnUiThread(run);
+	};
+	
+//	@Override
+//	protected void onPause() {
+//
+//	   super.onPause();
+//
+//		Log.i(TAG, "--onPause");
+//	}
+	
+	public void goToNetworks(View view) {
+		
+		String message = "БЭГ";
+		Intent share = new Intent(Intent.ACTION_SEND);
+		share.setType("text/plain");
+		share.putExtra(Intent.EXTRA_TEXT, message);
+		startActivity(Intent.createChooser(share, "Поделиться"));
+			
 	}
 
 	public void goToFavourites(View view) {

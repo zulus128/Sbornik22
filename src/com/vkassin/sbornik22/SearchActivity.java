@@ -31,6 +31,8 @@ public class SearchActivity extends Activity {
 		EditText et = (EditText) this.findViewById(R.id.topic);
 		Common.secondListTitle = et.getText().toString(); 
 		Common.isSearch = true;
+		Common.isFavourites = false;
+
 		Intent i = new Intent(SearchActivity.this, TaskListActivity.class);
 		startActivity(i);
 	}

@@ -69,6 +69,12 @@
         android:layout_weight="0.1"
         android:background="@color/MyGray"
         android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageStatus"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="-7dp"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </LinearLayout>

@@ -55,9 +55,21 @@ public class RazdelArrayAdapter extends ArrayAdapter<RazdelItem> {
 			text.setText(item.text);
 
 			ImageView imgView = (ImageView) convertView.findViewById(R.id.razdelImageT);
-			String uri = "drawable/" + item.icon;
+			String uri = "drawable/" + ((item.lock == 0)?item.icon:"dicon_07");
 			int imageResource = ctx.getResources().getIdentifier(uri, null, ctx.getPackageName());
 			imgView.setImageResource(imageResource);
+			
+//			ImageView imgLock = (ImageView) convertView.findViewById(R.id.razdelLock);
+//			if(item.lock == 0) {
+//				
+//				imgLock.setVisibility(View.INVISIBLE);
+//			}
+//			else {
+//				
+//				imgLock.setVisibility(View.VISIBLE);
+//
+//			}
+
 		}
 
 		return convertView;

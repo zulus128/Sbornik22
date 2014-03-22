@@ -1,50 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="0dip"
-    android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    android:orientation="horizontal"
-    android:paddingTop="13dp"
-    android:paddingBottom="13dp"
-    android:paddingLeft="13dp" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/razdelItemRel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
+    <!--
     <ImageView
-        android:id="@+id/razdelImageT"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+        android:id="@+id/razdelLock"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/dicon_07" />
+    -->
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:background="@android:color/transparent"
-        android:orientation="vertical"
-        android:paddingLeft="13dp" >
+        android:orientation="horizontal"
+        android:paddingBottom="13dp"
+        android:paddingLeft="13dp"
+        android:paddingTop="13dp" >
 
-        <TextView
-            android:id="@+id/RazdelNameTextView"
+        <ImageView
+            android:id="@+id/razdelImageT"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/MyDarkGray"
-            android:textSize="15sp"
-            android:textStyle="bold" >
-        </TextView>
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingLeft="13dp" >
 
-        <!--
+            <TextView
+                android:id="@+id/RazdelNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/MyDarkGray"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <!--
              <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/dotted" />
-        -->
+            -->
 
-        <TextView
-            android:id="@+id/RazdelTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:minLines="2"
-            android:textColor="@color/MyDarkGray"
-            android:textSize="12sp" >
-        </TextView>
+            <TextView
+                android:id="@+id/RazdelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textColor="@color/MyDarkGray"
+                android:textSize="12sp" >
+            </TextView>
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

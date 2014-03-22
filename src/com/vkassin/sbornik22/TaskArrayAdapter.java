@@ -50,6 +50,24 @@ public class TaskArrayAdapter extends ArrayAdapter<TaskItem> {
 
 //			ImageView imgMy1 = (ImageView) convertView.findViewById(R.id.imageMy1);
 //			imgMy1.setVisibility((item.my1 == 1)?View.VISIBLE:View.GONE);
+    		
+			ImageView imgStat = (ImageView) convertView.findViewById(R.id.imageStatus);
+			String uri = "drawable/";
+			if(item.lock != 0) {
+				
+				uri += "dicon_07";
+			} else if (Common.isMy(item.getId())){
+
+				uri += "dicon_08";
+				
+			} else if (Common.isViewed(item.getId())){
+
+				uri += "dicon_06";
+				
+			}
+			int imageResource = ctx.getResources().getIdentifier(uri, null, ctx.getPackageName());
+			imgStat.setImageResource(imageResource);
+
 
     	}
     	

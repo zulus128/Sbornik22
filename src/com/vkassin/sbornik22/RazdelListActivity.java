@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 
 public class RazdelListActivity extends Activity {
 
+	private static final String TAG = "Sbornik.RazdelListActivity";
+
 	private ListView list;
 	private RazdelArrayAdapter adapter;
 
@@ -28,9 +31,10 @@ public class RazdelListActivity extends Activity {
 		setContentView(R.layout.razdel_activity);
 
 		TextView text = (TextView) findViewById(R.id.first_screen_title);
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/GothaProReg.otf");
+		Typeface tf = Typeface.createFromAsset(getAssets(),
+				"fonts/GothaProReg.otf");
 		text.setTypeface(tf);
-		
+
 		Common.app_ctx = getApplicationContext();
 		Common.loadDatabase();
 
@@ -44,16 +48,24 @@ public class RazdelListActivity extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 
+				int lock = adapter.getItems().get(arg2).lock;
+				if (lock != 0)
+					return;
 				Common.curRazdel = adapter.getItems().get(arg2).getId();
 				Common.curRazdelName = adapter.getItems().get(arg2).name;
-//				Common.secondListTitle = "БЭГ. " + Common.curRazdel + ". "
-//				+ adapter.getItems().get(arg2).name;
-				Common.secondListTitle = "БЭГ / " + adapter.getItems().get(arg2).name;
+				// Common.secondListTitle = "БЭГ. " + Common.curRazdel + ". "
+				// + adapter.getItems().get(arg2).name;
+				Common.secondListTitle = "БЭГ / "
+						+ adapter.getItems().get(arg2).name;
 				Common.isSearch = false;
-				Intent i = new Intent(RazdelListActivity.this, TaskListActivity.class);
+				Common.isFavourites = false;
+
+				Intent i = new Intent(RazdelListActivity.this,
+						TaskListActivity.class);
 				startActivity(i);
 			}
 		});
+
 	}
 
 	public void goToInfo(View view) {
@@ -61,7 +73,7 @@ public class RazdelListActivity extends Activity {
 	}
 
 	public void goToFavourites(View view) {
-		
+
 		Common.isSearch = false;
 		Common.isFavourites = true;
 		Intent i = new Intent(RazdelListActivity.this, TaskListActivity.class);
@@ -75,9 +87,15 @@ public class RazdelListActivity extends Activity {
 	}
 
 	public void goToNetworks(View view) {
-		// Do something in response to button click
+		
+		String message = "БЭГ";
+		Intent share = new Intent(Intent.ACTION_SEND);
+		share.setType("text/plain");
+		share.putExtra(Intent.EXTRA_TEXT, message);
+		startActivity(Intent.createChooser(share, "Поделиться"));
+			
 	}
-
+	
 	// @Override
 	// public boolean onCreateOptionsMenu(Menu menu) {
 	// // Inflate the menu items for use in the action bar

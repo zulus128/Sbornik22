@@ -101,14 +101,15 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp" >
+                android:layout_gravity="center_vertical" >
 
                 <TextView
                     android:id="@+id/DetailNumTextView"
                     android:layout_width="30dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="fill_parent"
                     android:layout_alignParentLeft="true"
-                    android:gravity="center_horizontal"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal|center_vertical"
                     android:textColor="@color/MyOrange"
                     android:textSize="17sp" >
                 </TextView>
@@ -117,10 +118,18 @@
                     android:id="@+id/DetailNameTextView"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/DetailNumTextView"
                     android:textColor="@color/MyOrange"
                     android:textSize="17sp" >
                 </TextView>
+
+                <ImageView
+                    android:id="@+id/detailImageStatus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true" />
             </RelativeLayout>
 
             <ImageView

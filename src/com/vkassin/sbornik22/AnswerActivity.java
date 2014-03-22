@@ -51,6 +51,33 @@ public class AnswerActivity extends Activity {
 		this.setFavButton();
 	}
 	
+	private void refresh() {
+		
+		ImageView imgStat = (ImageView) this.findViewById(R.id.answerImageStatus);
+		String uri = "drawable/";
+		if (Common.isMy(ti.getId())){
+
+			uri += "dicon_08";
+			
+		} else if (Common.isViewed(ti.getId())){
+
+			uri += "dicon_06";
+			
+		}
+		int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+		imgStat.setImageResource(imageResource);
+
+	}
+	
+	@Override
+	protected void onResume() {
+	
+		super.onResume();
+		
+//		Log.i(TAG, "--onResume");
+		refresh();
+	};
+	
 	private void setFavButton() {
 
 		ImageButton myfav = (ImageButton)this.findViewById(R.id.answer_button_my);
@@ -59,7 +86,7 @@ public class AnswerActivity extends Activity {
         boolean ismy = Common.isMy(ti.getId());
 		int imageResource = getResources().getIdentifier(ismy?urim:urip, null, getPackageName());
         myfav.setBackgroundResource(imageResource);
-
+        refresh();
 	}
 	
 	public void goToPic(View view) {
@@ -118,8 +145,15 @@ public class AnswerActivity extends Activity {
 	}
 
 	public void goToNetworks(View view) {
-		// Do something in response to button click
+		
+		String message = ti.name + " / " + ti.text + " / " + ti.answer;
+		Intent share = new Intent(Intent.ACTION_SEND);
+		share.setType("text/plain");
+		share.putExtra(Intent.EXTRA_TEXT, message);
+		startActivity(Intent.createChooser(share, "Поделиться"));
+			
 	}
+
 	
 	public void goToInfo(View view) {
 		

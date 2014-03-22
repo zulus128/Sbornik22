@@ -24,7 +24,7 @@ public class TaskListActivity extends Activity {
 		setContentView(R.layout.tasklist_activity);
 
 		TextView title = (TextView) this.findViewById(R.id.TaskListTitle01);
-		title.setText(Common.secondListTitle);
+		title.setText(Common.isFavourites?"Мои задачи":Common.secondListTitle);
 
 		list = (ListView) this.findViewById(R.id.TaskList);
 		ArrayList<TaskItem> filteredTasks = new ArrayList<TaskItem>();
@@ -33,8 +33,16 @@ public class TaskListActivity extends Activity {
 			TaskItem task = it.next();
 			if(!Common.isSearch) {
 				
-				if ((task.section == Common.curRazdel) || (Common.curRazdel == 1))
-					filteredTasks.add(task);
+				if(Common.isFavourites) {
+
+					if (Common.isMy(task.getId()))
+						filteredTasks.add(task);
+				}
+				else {
+
+					if ((task.section == Common.curRazdel) || (Common.curRazdel == 1))
+						filteredTasks.add(task);
+				}
 			}
 			else {
 				
@@ -73,7 +81,11 @@ public class TaskListActivity extends Activity {
 	}
 
 	public void goToFavourites(View view) {
-		// Do something in response to button click
+		
+		Common.isSearch = false;
+		Common.isFavourites = true;
+		Intent i = new Intent(TaskListActivity.this, TaskListActivity.class);
+		startActivity(i);
 	}
 
 	public void goToSearch(View view) {
@@ -82,7 +94,7 @@ public class TaskListActivity extends Activity {
 		startActivity(i);
 	}
 
-	public void goToOglav(View view) {
+	public void goToInfo(View view) {
 		
 		Intent i = new Intent(TaskListActivity.this, RazdelListActivity.class);
 		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);

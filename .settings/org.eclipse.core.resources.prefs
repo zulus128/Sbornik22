@@ -1,5 +1,9 @@
-#Sat Mar 01 19:32:07 ALMT 2014
+#Sat Mar 22 16:09:17 ALMT 2014
 eclipse.preferences.version=1
 encoding//assets/razdel.json=UTF-8
 encoding//assets/task.json=UTF-8
+encoding//src/com/vkassin/sbornik22/AnswerActivity.java=UTF-8
+encoding//src/com/vkassin/sbornik22/Common.java=UTF-8
+encoding//src/com/vkassin/sbornik22/DetailTaskActivity.java=UTF-8
 encoding//src/com/vkassin/sbornik22/RazdelListActivity.java=UTF-8
+encoding//src/com/vkassin/sbornik22/TaskListActivity.java=UTF-8

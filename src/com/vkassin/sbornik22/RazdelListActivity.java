@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
@@ -60,7 +61,11 @@ public class RazdelListActivity extends Activity {
 	}
 
 	public void goToFavourites(View view) {
-		// Do something in response to button click
+		
+		Common.isSearch = false;
+		Common.isFavourites = true;
+		Intent i = new Intent(RazdelListActivity.this, TaskListActivity.class);
+		startActivity(i);
 	}
 
 	public void goToSearch(View view) {

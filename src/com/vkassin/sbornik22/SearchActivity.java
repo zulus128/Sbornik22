@@ -18,6 +18,14 @@ public class SearchActivity extends Activity {
 		
 	}
 	
+	public void goToFavourites(View view) {
+		
+		Common.isSearch = false;
+		Common.isFavourites = true;
+		Intent i = new Intent(SearchActivity.this, TaskListActivity.class);
+		startActivity(i);
+	}
+
 	public void goSearch(View view) {
 
 		EditText et = (EditText) this.findViewById(R.id.topic);
@@ -27,7 +35,7 @@ public class SearchActivity extends Activity {
 		startActivity(i);
 	}
 	
-	public void goToOglav(View view) {
+	public void goToInfo(View view) {
 		
 		Intent i = new Intent(SearchActivity.this, RazdelListActivity.class);
 		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);

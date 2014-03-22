@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -20,14 +21,15 @@ import android.widget.TextView;
 public class DetailTaskActivity extends Activity {
 
 	private static final String TAG = "Sbornik.DetailTaskActivity";
-
+	private TaskItem ti;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.detailtask_activity);
 
-		TaskItem ti = Common.getCurTask();
+		ti = Common.getCurTask();
 
 		TextView tv = (TextView) this.findViewById(R.id.DetailTaskTextView);
 		tv.setText(ti.text);
@@ -74,8 +76,26 @@ public class DetailTaskActivity extends Activity {
 			
 		}
 		
+		setFavButton();
 	}
 
+	private void setFavButton() {
+
+		ImageButton myfav = (ImageButton)this.findViewById(R.id.detail_button_my);
+        String urip = "drawable/dicon_11";
+        String urim = "drawable/dicon_12";
+        boolean ismy = Common.isMy(ti.getId());
+		int imageResource = getResources().getIdentifier(ismy?urim:urip, null, getPackageName());
+        myfav.setBackgroundResource(imageResource);
+
+	}
+	
+	public void goMy(View view) {
+		
+		Common.switchMy(ti.getId());
+		this.setFavButton();
+	}
+	
 	public void goToPic(View view) {
 
 		Intent i = new Intent(DetailTaskActivity.this, PictureActivity.class);
@@ -84,6 +104,7 @@ public class DetailTaskActivity extends Activity {
 
 	public void goAnswer(View view) {
 
+		Common.setViewed(ti.getId());
 		Intent i = new Intent(DetailTaskActivity.this, AnswerActivity.class);
 		startActivity(i);
 	}
@@ -95,6 +116,7 @@ public class DetailTaskActivity extends Activity {
 
 	public void goForward(View view) {
 
+		Common.curTask = ti.getId();
 		boolean b = Common.setNextTask();
 		Intent i;
 		if(b) {
@@ -104,8 +126,34 @@ public class DetailTaskActivity extends Activity {
 			
 			i = new Intent(DetailTaskActivity.this, RazdelListActivity.class);
 			i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
 		}
+	
 		startActivity(i);
 	}
 
+	public void goToFavourites(View view) {
+		
+		Common.isSearch = false;
+		Common.isFavourites = true;
+		Intent i = new Intent(DetailTaskActivity.this, TaskListActivity.class);
+		startActivity(i);
+	}
+
+	public void goToSearch(View view) {
+
+		Intent i = new Intent(DetailTaskActivity.this, SearchActivity.class);
+		startActivity(i);
+	}
+
+	public void goToNetworks(View view) {
+		// Do something in response to button click
+	}
+	
+	public void goToInfo(View view) {
+		
+		Intent i = new Intent(DetailTaskActivity.this, RazdelListActivity.class);
+		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		startActivity(i);
+	}
 }

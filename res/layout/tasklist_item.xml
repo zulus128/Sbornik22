@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:paddingTop="5dp"
-            android:textColor="@color/MyDarkGray"
+            android:textColor="@color/MyDottedGray"
             android:textSize="15sp" >
         </TextView>
     </LinearLayout>

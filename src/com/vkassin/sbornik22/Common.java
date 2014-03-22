@@ -1,11 +1,19 @@
 package com.vkassin.sbornik22;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.StreamCorruptedException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,6 +22,7 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
+import android.widget.Toast;
 
 public class Common {
 
@@ -24,7 +33,8 @@ public class Common {
 	public static ArrayList<TaskItem> filteredTasks;
 	public static Context app_ctx;
 	public static String secondListTitle;
-	public static Boolean isSearch;
+	public static boolean isSearch;
+	public static boolean isFavourites;
 
 	public final static String JSON_TASK_TAG_ID = "id";
 	public final static String JSON_TASK_TAG_ORDER = "order";
@@ -49,6 +59,129 @@ public class Common {
 	public static String curRazdelName;
 	public static int curTask;
 
+	private static Set<Integer> myFavourites;
+	private static String FLIST_FNAME = "my_favr";
+	private static Set<Integer> myViewed;
+	private static String VLIST_FNAME = "my_view";
+	
+	public static void saveFavrList() {
+
+		Log.i(TAG, "saveFavrList()");
+		FileOutputStream fos;
+		try {
+
+			fos = app_ctx.openFileOutput(FLIST_FNAME, Context.MODE_PRIVATE);
+			ObjectOutputStream os = new ObjectOutputStream(fos);
+			os.writeObject(myFavourites);
+			os.close();
+			fos.close();
+
+		} catch (FileNotFoundException e) {
+
+			Toast.makeText(app_ctx, "Файл не записан " + e.toString(),
+					Toast.LENGTH_SHORT).show();
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			Toast.makeText(app_ctx, "Файл не записан: " + e.toString(),
+					Toast.LENGTH_SHORT).show();
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void loadFavrList() {
+
+		FileInputStream fileInputStream;
+		try {
+
+			fileInputStream = app_ctx.openFileInput(FLIST_FNAME);
+			ObjectInputStream oInputStream = new ObjectInputStream(
+					fileInputStream);
+			Object one = oInputStream.readObject();
+			myFavourites = (HashSet<Integer>) one;
+			oInputStream.close();
+			fileInputStream.close();
+
+		} catch (FileNotFoundException e) {
+
+			// e.printStackTrace();
+			Log.i(TAG, "creates blank. no file " + FLIST_FNAME);
+			myFavourites = new HashSet<Integer>();
+
+		} catch (StreamCorruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// return favourites;
+	}
+	
+	public static void saveViewedList() {
+
+		Log.i(TAG, "saveViewedList()");
+		FileOutputStream fos;
+		try {
+
+			fos = app_ctx.openFileOutput(VLIST_FNAME, Context.MODE_PRIVATE);
+			ObjectOutputStream os = new ObjectOutputStream(fos);
+			os.writeObject(myViewed);
+			os.close();
+			fos.close();
+
+		} catch (FileNotFoundException e) {
+
+			Toast.makeText(app_ctx, "Файл не записан " + e.toString(),
+					Toast.LENGTH_SHORT).show();
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			Toast.makeText(app_ctx, "Файл не записан: " + e.toString(),
+					Toast.LENGTH_SHORT).show();
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void loadViewedList() {
+
+		FileInputStream fileInputStream;
+		try {
+
+			fileInputStream = app_ctx.openFileInput(VLIST_FNAME);
+			ObjectInputStream oInputStream = new ObjectInputStream(
+					fileInputStream);
+			Object one = oInputStream.readObject();
+			myViewed = (HashSet<Integer>) one;
+			oInputStream.close();
+			fileInputStream.close();
+
+		} catch (FileNotFoundException e) {
+
+			// e.printStackTrace();
+			Log.i(TAG, "creates blank. no file " + VLIST_FNAME);
+			myViewed = new HashSet<Integer>();
+
+		} catch (StreamCorruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// return favourites;
+	}
+	
 	public static boolean setNextTask() {
 
 		for (Iterator<TaskItem> it = filteredTasks.iterator(); it.hasNext();) {
@@ -143,6 +276,9 @@ public class Common {
 				}
 			});
 
+			loadFavrList();
+			loadViewedList();
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -167,5 +303,40 @@ public class Common {
 		}
 
 		return res;
+	}
+	
+	public static boolean isMy(int taskid) {
+		
+		Integer i = Integer.valueOf(taskid);
+		return myFavourites.contains(i);
+	}
+	
+	public static void switchMy(int taskid) {
+
+		Integer i = Integer.valueOf(taskid);
+		if (myFavourites.contains(i)) {
+			
+			myFavourites.remove(i);
+		}
+		else {
+			
+			myFavourites.add(i);
+		}
+
+		saveFavrList();
+	}
+	
+	public static boolean isViewed(int taskid) {
+		
+		Integer i = Integer.valueOf(taskid);
+		return myViewed.contains(i);
+	}
+	
+	public static void setViewed(int taskid) {
+
+		Integer i = Integer.valueOf(taskid);
+		myViewed.add(i);
+		
+		saveViewedList();
 	}
 }

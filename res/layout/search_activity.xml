@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/MyLightBlue"
+    android:background="@drawable/okno_04"
     tools:context=".TaskListActivity" >
 
       <RelativeLayout
@@ -68,7 +68,7 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/LinLayout_razdel0000123"
+        android:id="@+id/LinLayout_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/RelLayout_TasList0123"
@@ -82,71 +82,66 @@
             android:id="@+id/DetTaskListTitle01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_label"
+            android:text="@string/title_label_search"
             android:textColor="@color/White"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/LinLayout_detailTask01"
         android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="60sp"
-        android:layout_below="@+id/LinLayout_razdel0000123"
+        android:layout_below="@+id/LinLayout_title"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal" >
 
         <EditText
             android:id="@+id/topic"
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:textSize="14sp"
             android:hint="@string/topic_hint"
+            android:background="@drawable/searchbox"
             android:inputType="text" />
 
         <Button
-            android:id="@+id/button_left"
-            android:layout_width="50sp"
-            android:layout_height="45sp"
+            android:id="@+id/button_ok"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:onClick="goSearch"
+            android:layout_marginLeft="5dp"
             android:scaleType="fitXY"
+            android:background="@drawable/round_button"
             android:text="@string/OK" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/LinLayout_detailTask01"
+    <RelativeLayout
+        android:id="@+id/LinLayout_detailTask051"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/MyBlue"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:paddingBottom="@dimen/bottompanel_vertical_margin"
-        android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-        android:paddingRight="@dimen/bottompanel_horizontal_margin"
-        android:paddingTop="@dimen/bottompanel_vertical_margin" >
+        android:background="@color/MyGray" >
 
         <ImageButton
             android:id="@+id/button_left"
-            android:layout_width="40sp"
-            android:layout_height="35sp"
-            android:layout_marginLeft="5sp"
-            android:layout_marginRight="90sp"
-            android:background="@drawable/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dicon_09"
             android:onClick="goBack"
             android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/button_right"
-            android:layout_width="40sp"
-            android:layout_height="35sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="90sp"
-            android:layout_marginRight="5sp"
-            android:background="@drawable/rigth"
+            android:background="@drawable/dicon_10"
             android:onClick="goForward"
             android:scaleType="fitXY" />
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

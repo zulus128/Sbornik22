@@ -2,154 +2,192 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/okno_03"
     tools:context=".TaskListActivity" >
 
     <RelativeLayout
-        android:id="@+id/RelLayout_picture00"
+        android:id="@+id/RelLayout_TasList0122"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/Gray" >
-
-        <RelativeLayout
-            android:id="@+id/RelLayout_picture01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10sp"
-            android:padding="5sp" >
-
-            <ImageView
-                android:id="@+id/imageId"
-                android:layout_width="30sp"
-                android:layout_height="30sp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/id" />
-
-            <TextView
-                android:id="@+id/PictureTaskId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/White"
-                android:textSize="14sp" >
-            </TextView>
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/PictureTaskTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textColor="@color/Red"
-            android:textSize="18sp" >
-        </TextView>
-
-        <ImageView
-            android:id="@+id/imageMy"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10sp"
-            android:padding="5sp"
-            android:src="@drawable/my33" />
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/RelLayout_picture00"
-        android:layout_marginBottom="45sp" >
-
-        <TextView
-            android:id="@+id/PictureTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:paddingBottom="@dimen/bottompanel_vertical_margin"
-            android:paddingLeft="@dimen/bottompanel_horizontal_margin"
-            android:paddingRight="@dimen/bottompanel_horizontal_margin"
-            android:paddingTop="@dimen/bottompanel_vertical_margin"
-            android:textColor="@color/Black"
-            android:textSize="18sp" >
-        </TextView>
-    </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/LinLayout_detailTask01"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/MyBlue"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
+        android:background="@drawable/panel_verh"
         android:paddingBottom="@dimen/bottompanel_vertical_margin"
         android:paddingLeft="@dimen/bottompanel_horizontal_margin"
         android:paddingRight="@dimen/bottompanel_horizontal_margin"
         android:paddingTop="@dimen/bottompanel_vertical_margin" >
 
+        <ImageView
+            android:id="@+id/imageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dicon_05" />
+
+        <ImageButton
+            android:id="@+id/button_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/dicon_01"
+            android:contentDescription="@string/buttitle_info"
+            android:onClick="goToInfo"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_info"
+            android:background="@drawable/dicon_02"
+            android:contentDescription="@string/buttitle_fav"
+            android:onClick="goToFavourites"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_fav"
+            android:background="@drawable/dicon_03"
+            android:contentDescription="@string/buttitle_search"
+            android:onClick="goToSearch"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/button_networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_search"
+            android:background="@drawable/dicon_04"
+            android:contentDescription="@string/buttitle_netw"
+            android:onClick="goToNetworks"
+            android:paddingRight="8dp"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LinLayout_razdel000018"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayout_TasList0122"
+        android:background="@color/MyDarkGray"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottompanel_vertical_margin"
+        android:paddingTop="@dimen/bottompanel_vertical_margin" >
+
+        <TextView
+            android:id="@+id/AnswerTitle01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_label"
+            android:textColor="@color/White"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinLayout_razdel000018"
+        android:layout_marginBottom="55dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <TextView
+                    android:id="@+id/DetailNumTextView"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/MyOrange"
+                    android:textSize="17sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/DetailNameTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/DetailNumTextView"
+                    android:textColor="@color/MyOrange"
+                    android:textSize="17sp" >
+                </TextView>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageDiv2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dotted1" />
+
+            <TextView
+                android:id="@+id/AnswerTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/MyOrange"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/LinLayout_detailTask01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/MyGray" >
+
         <ImageButton
             android:id="@+id/button_left"
-            android:layout_width="40sp"
-            android:layout_height="35sp"
-            android:layout_marginLeft="5sp"
-            android:layout_marginRight="5sp"
-            android:background="@drawable/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dicon_09"
             android:onClick="goBack"
             android:scaleType="fitXY" />
 
         <ImageButton
-            android:id="@+id/button_friends"
-            android:layout_width="40sp"
-            android:layout_height="35sp"
-            android:layout_marginLeft="5sp"
-            android:layout_marginRight="2sp"
-            android:background="@drawable/friend2"
-            android:onClick="goFriend"
+            android:id="@+id/button_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/answer_button_my"
+            android:background="@drawable/button_question_custom"
+            android:onClick="goBack"
             android:scaleType="fitXY" />
 
         <ImageButton
-            android:id="@+id/button_pic"
-            android:layout_width="60sp"
-            android:layout_height="35sp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="2sp"
-            android:layout_marginRight="2sp"
-            android:background="@drawable/button_pic1_custom"
-            android:onClick="goToPic"
-            android:scaleType="fitXY" />
-
-        <ImageButton
-            android:id="@+id/button_answer"
-            android:layout_width="60sp"
-            android:layout_height="35sp"
-            android:layout_marginLeft="2sp"
-            android:layout_marginRight="2sp"
-            android:background="@drawable/ansver1"
-            android:onClick="goAnswer"
-            android:scaleType="fitXY" />
-
-        <ImageButton
-            android:id="@+id/button_my"
-            android:layout_width="40sp"
-            android:layout_height="35sp"
-            android:layout_marginLeft="2sp"
-            android:layout_marginRight="2sp"
-            android:background="@drawable/my1"
-            android:onClick="goFriend"
+            android:id="@+id/answer_button_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dicon_11"
+            android:onClick="goMy"
             android:scaleType="fitXY" />
 
         <ImageButton
             android:id="@+id/button_right"
-            android:layout_width="40sp"
-            android:layout_height="35sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="5sp"
-            android:layout_marginRight="5sp"
-            android:background="@drawable/rigth"
+            android:background="@drawable/dicon_10"
             android:onClick="goForward"
             android:scaleType="fitXY" />
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

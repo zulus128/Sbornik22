@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_label"
             android:textColor="@color/White"
-            android:textSize="10sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 

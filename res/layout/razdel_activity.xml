@@ -103,12 +103,19 @@
             android:choiceMode="singleChoice"
             android:divider="@drawable/dotted"
             android:dividerHeight="2dp"
-            android:listSelector="@drawable/list_selector"
             android:footerDividersEnabled="true"
             android:headerDividersEnabled="true"
+            android:listSelector="@drawable/list_selector"
             android:paddingBottom="5dp"
             android:paddingTop="0dp" >
         </ListView>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageOkno"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/okno_0" />
 
 </RelativeLayout>

@@ -174,9 +174,12 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/answer_button_my"
-            android:background="@drawable/button_question_custom"
+            android:background="@null"
             android:onClick="goBack"
-            android:scaleType="fitXY" />
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_question_custom" />
 
         <ImageButton
             android:id="@+id/answer_button_my"

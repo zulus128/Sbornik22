@@ -189,9 +189,13 @@ public class Common {
 			TaskItem task = it.next();
 			if(task.getId() == curTask) {
 				
-				if(it.hasNext()) {
+//				if(it.hasNext()) {
+				while(it.hasNext()) {
 				
-					curTask = it.next().getId();
+					TaskItem nexttask = it.next();
+					if(nexttask.lock != 0)
+						continue;
+					curTask = nexttask.getId();
 					return true;
 				}
 				return false;

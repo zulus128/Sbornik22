@@ -73,7 +73,7 @@
         <ImageView
             android:id="@+id/imageStatus"
             android:layout_width="fill_parent"
-            android:layout_marginTop="-7dp"
+            android:layout_marginTop="-0dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
 

@@ -8,10 +8,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
@@ -28,6 +30,13 @@ public class RazdelListActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 
+//		try {
+//			Thread.sleep(2000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
 		setContentView(R.layout.razdel_activity);
 
 		TextView text = (TextView) findViewById(R.id.first_screen_title);
@@ -37,6 +46,17 @@ public class RazdelListActivity extends Activity {
 
 		Common.app_ctx = getApplicationContext();
 		Common.loadDatabase();
+
+		ImageView okno = (ImageView) this.findViewById(R.id.imageOkno);
+		okno.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				v.setVisibility(View.GONE);
+			}
+		
+		});
 
 		list = (ListView) this.findViewById(R.id.RazdelList);
 		adapter = new RazdelArrayAdapter(this, R.layout.razdel_item,

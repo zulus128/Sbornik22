@@ -76,6 +76,9 @@ public class AnswerActivity extends Activity {
 		
 //		Log.i(TAG, "--onResume");
 		refresh();
+		
+		Common.curTask = ti.getId();
+
 	};
 	
 	private void setFavButton() {

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -262,18 +264,36 @@ public class DetailTaskActivity extends Activity {
 
 		Common.curTask = ti.getId();
 		boolean b = Common.setNextTask();
-		Intent i;
 		if (b) {
 
-			i = new Intent(DetailTaskActivity.this, DetailTaskActivity.class);
+			Intent i = new Intent(DetailTaskActivity.this, DetailTaskActivity.class);
+			startActivity(i);
+			
 		} else {
 
-			i = new Intent(DetailTaskActivity.this, RazdelListActivity.class);
-			i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage(R.string.dialog_message).setTitle(
+					R.string.dialog_title);
+			builder.setPositiveButton(R.string.case1, new DialogInterface.OnClickListener() {
+		           public void onClick(DialogInterface dialog, int id) {
 
+		        	   Intent i = new Intent(DetailTaskActivity.this, RazdelListActivity.class);
+		        	   i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		        	   startActivity(i);
+
+				}
+		       });
+			builder.setNegativeButton(R.string.case2, new DialogInterface.OnClickListener() {
+		           public void onClick(DialogInterface dialog, int id) {
+		        	  
+		        	   Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Smart+Kids+Art+Studio"));
+		        	   startActivity(browserIntent);	
+		        	   }
+		       });
+			AlertDialog dialog = builder.create();
+			dialog.show();
 		}
 
-		startActivity(i);
 	}
 
 	public void goToFavourites(View view) {

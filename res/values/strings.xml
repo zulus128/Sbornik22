@@ -15,5 +15,9 @@
     <string name="searchDB">Поиск по БД</string>
     <string name="topic_hint">Введите фразу</string>
     <string name="OK">OK</string>
+    <string name="dialog_title">Поздравляем!</string>
+    <string name="dialog_message">Вы решили все задачи данного раздела</string>
+    <string name="case1">К оглавлению</string>
+    <string name="case2">Больше задач</string>
     
 </resources>

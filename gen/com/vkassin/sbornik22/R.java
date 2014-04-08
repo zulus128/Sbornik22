@@ -356,6 +356,10 @@ public final class R {
         public static final int buttitle_netw=0x7f060008;
         public static final int buttitle_oglav=0x7f060009;
         public static final int buttitle_search=0x7f060007;
+        public static final int case1=0x7f060010;
+        public static final int case2=0x7f060011;
+        public static final int dialog_message=0x7f06000f;
+        public static final int dialog_title=0x7f06000e;
         public static final int hello_world=0x7f060002;
         public static final int searchDB=0x7f06000b;
         public static final int title_label=0x7f060003;

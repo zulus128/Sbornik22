@@ -19,5 +19,9 @@
     <string name="dialog_message">Вы решили все задачи данного раздела</string>
     <string name="case1">К оглавлению</string>
     <string name="case2">Больше задач</string>
+    <string name="dialog_title1">Внимание!</string>
+    <string name="dialog_message1">Выход из приложения</string>
+    <string name="case3">Выйти</string>
+    <string name="case4">Больше задач</string>
     
 </resources>

@@ -97,6 +97,14 @@ public class TaskListActivity extends Activity {
 	}
 
 	@Override
+	public void onBackPressed() {
+
+		Intent i = new Intent(this, RazdelListActivity.class);
+		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+		startActivity(i);
+	}
+
+	@Override
 	protected void onResume() {
 	
 		super.onResume();
@@ -140,7 +148,8 @@ public class TaskListActivity extends Activity {
 	public void goToInfo(View view) {
 		
 		Intent i = new Intent(TaskListActivity.this, RazdelListActivity.class);
-		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+//		i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		startActivity(i);
 	}
 

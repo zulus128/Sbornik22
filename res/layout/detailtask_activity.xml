@@ -204,7 +204,7 @@
             android:layout_alignParentLeft="true"
             android:background="@drawable/dicon_09"
             android:onClick="goBack"
-            android:scaleType="fitXY" />
+             />
 
         <ImageButton
             android:id="@+id/detail_button_my"
@@ -223,9 +223,9 @@
             android:layout_toRightOf="@+id/detail_button_my"
             android:background="@null"
             android:onClick="goAnswer"
-            android:paddingBottom="20dp"
-            android:paddingRight="10dp"
-            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
             android:src="@drawable/button_answer_custom" />
 
         <ImageButton
@@ -236,7 +236,7 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/dicon_10"
             android:onClick="goForward"
-            android:scaleType="fitXY" />
+             />
     </RelativeLayout>
 
 </RelativeLayout>

@@ -1,8 +1,15 @@
 package com.vkassin.sbornik22;
 
+import java.util.List;
+
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.app.AlertDialog;
+import android.app.ActivityManager.RunningTaskInfo;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -25,19 +32,32 @@ public class RazdelListActivity extends Activity {
 	private ListView list;
 	private RazdelArrayAdapter adapter;
 
+//	@Override
+//	protected void onResume() {
+//	
+//		super.onResume();
+//		taskInfo();
+//		
+//	};
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		
+		// try {
+		// Thread.sleep(2000);
+		// } catch (InterruptedException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+
 		setContentView(R.layout.razdel_activity);
+
+//		if (getIntent().getBooleanExtra("Exit me", false)) {
+//			finish();
+//			return; // add this to prevent from doing unnecessary stuffs
+//		}
 
 		TextView text = (TextView) findViewById(R.id.first_screen_title);
 		Typeface tf = Typeface.createFromAsset(getAssets(),
@@ -49,13 +69,13 @@ public class RazdelListActivity extends Activity {
 
 		ImageView okno = (ImageView) this.findViewById(R.id.imageOkno);
 		okno.setOnClickListener(new OnClickListener() {
-			
+
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				
+
 				v.setVisibility(View.GONE);
 			}
-		
+
 		});
 
 		list = (ListView) this.findViewById(R.id.RazdelList);
@@ -82,10 +102,58 @@ public class RazdelListActivity extends Activity {
 
 				Intent i = new Intent(RazdelListActivity.this,
 						TaskListActivity.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
 				startActivity(i);
 			}
 		});
 
+	}
+
+	
+//	public void taskInfo() {
+//		
+//		ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+//
+//		List<ActivityManager.RunningTaskInfo> list = am.getRunningTasks(10);
+//		for (RunningTaskInfo task : list) {
+//			if (task.baseActivity.flattenToShortString().startsWith(
+//					"com.vkassin")) {
+//				Log.w(TAG, "------------------");
+//				Log.w(TAG, "Count: " + task.numActivities);
+//				Log.w(TAG,
+//						"Root: " + task.baseActivity.flattenToShortString());
+//				Log.w(TAG,
+//						"Top: " + task.topActivity.flattenToShortString());
+//			}
+//		}
+//	}
+
+	@Override
+	public void onBackPressed() {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage(R.string.dialog_message1).setTitle(
+				R.string.dialog_title1);
+		builder.setPositiveButton(R.string.case3,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+
+						RazdelListActivity.super.onBackPressed();
+					}
+				});
+		builder.setNegativeButton(R.string.case4,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+
+						Intent browserIntent = new Intent(
+								Intent.ACTION_VIEW,
+								Uri.parse(Common.GP_URL));
+						startActivity(browserIntent);
+					}
+				});
+		AlertDialog dialog = builder.create();
+		dialog.show();
 	}
 
 	public void goToInfo(View view) {
@@ -107,15 +175,15 @@ public class RazdelListActivity extends Activity {
 	}
 
 	public void goToNetworks(View view) {
-		
+
 		String message = "БЭГ";
 		Intent share = new Intent(Intent.ACTION_SEND);
 		share.setType("text/plain");
 		share.putExtra(Intent.EXTRA_TEXT, message);
 		startActivity(Intent.createChooser(share, "Поделиться"));
-			
+
 	}
-	
+
 	// @Override
 	// public boolean onCreateOptionsMenu(Menu menu) {
 	// // Inflate the menu items for use in the action bar

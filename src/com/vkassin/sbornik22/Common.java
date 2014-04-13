@@ -27,6 +27,8 @@ import android.widget.Toast;
 public class Common {
 
 	private static final String TAG = "Sbornik.Common";
+	
+	public static final String GP_URL = "https://play.google.com/store/apps/developer?id=Smart+Kids+Art+Studio";
 
 	public static ArrayList<RazdelItem> razdels;
 	public static ArrayList<TaskItem> tasks;

@@ -26,15 +26,15 @@ public class SearchActivity extends Activity {
 		startActivity(i);
 	}
 
-	public void goSearch(View view) {
+	public void goToSearch(View view) {
 
-		EditText et = (EditText) this.findViewById(R.id.topic);
-		Common.secondListTitle = et.getText().toString();
-		Common.isSearch = true;
-		Common.isFavourites = false;
-
-		Intent i = new Intent(SearchActivity.this, TaskListActivity.class);
-		startActivity(i);
+//		EditText et = (EditText) this.findViewById(R.id.topic);
+//		Common.secondListTitle = et.getText().toString();
+//		Common.isSearch = true;
+//		Common.isFavourites = false;
+//
+//		Intent i = new Intent(SearchActivity.this, TaskListActivity.class);
+//		startActivity(i);
 	}
 
 	public void goToInfo(View view) {

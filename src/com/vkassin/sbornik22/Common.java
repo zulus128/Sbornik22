@@ -48,6 +48,8 @@ public class Common {
 	public final static String JSON_TASK_TAG_MY1 = "my1";
 	public final static String JSON_TASK_TAG_PIC = "pic";
 	public final static String JSON_TASK_TAG_PICSIGN = "picsign";
+	public final static String JSON_TASK_TAG_FIG = "fig";
+	public final static String JSON_TASK_TAG_FIGSIGN = "figsign";
 
 	public final static String JSON_RAZDEL_TAG_ID = "section";
 	public final static String JSON_RAZDEL_TAG_ORDER = "order";
@@ -238,6 +240,8 @@ public class Common {
 				ri.my1 = row.getInt(JSON_TASK_TAG_MY1);
 				ri.pic = row.getString(JSON_TASK_TAG_PIC);
 				ri.picsign = row.getString(JSON_TASK_TAG_PICSIGN);
+				ri.fig = row.getString(JSON_TASK_TAG_FIG);
+				ri.figsign = row.getString(JSON_TASK_TAG_FIGSIGN);
 				tasks.add(ri);
 				// Log.i(TAG, "row = " + row);
 			}

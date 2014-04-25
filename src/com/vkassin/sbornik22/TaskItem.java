@@ -7,6 +7,8 @@ public class TaskItem extends Item {
 	public int my1;
 	public String pic;
 	public String picsign;
+	public String fig;
+	public String figsign;
 
 	public TaskItem(int i) {
 

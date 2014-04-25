@@ -122,7 +122,7 @@ public class PainterView extends ImageView {
 	@Override
 	public void setImageBitmap(Bitmap bm) {
 		super.setImageBitmap(bm);
-		if (bm != null) {
+		if (bm != 0) {
 			if (bmWidth != bm.getWidth() & bmHeight != bm.getHeight()) {
 				bmWidth = bm.getWidth();
 				bmHeight = bm.getHeight();
@@ -345,7 +345,7 @@ public class PainterView extends ImageView {
 	
 	public void paintMode(){
 		eraseMode = false;
-		mPaint.setXfermode(null);
+		mPaint.setXfermode(0);
 	}
 	
 	public Bitmap getBitmap(){

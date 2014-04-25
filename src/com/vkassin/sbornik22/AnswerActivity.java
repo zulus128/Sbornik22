@@ -89,7 +89,7 @@ public class AnswerActivity extends Activity {
 		title.setText("БЭГ / " + Common.curRazdelName + " / ЗАДАЧА № "
 				+ ti.getId() + " / ОТВЕТ");
 
-		if (ti.pic.equals("")) {
+		if (ti.fig.equals("")) {
 
 			ImageView imgDiv1 = (ImageView) this.findViewById(R.id.imageDiv1);
 			imgDiv1.setVisibility(View.GONE);
@@ -103,7 +103,7 @@ public class AnswerActivity extends Activity {
 
 		} else {
 
-			String uri = "drawable/" + ti.pic;
+			String uri = "drawable/" + ti.fig;
 			int imageResource = getResources().getIdentifier(uri, null,
 					getPackageName());
 			ImageView imgPic = (ImageView) this.findViewById(R.id.imagePicture);
@@ -111,7 +111,7 @@ public class AnswerActivity extends Activity {
 
 			TextView ptext = (TextView) this
 					.findViewById(R.id.DetailTaskPicTextView);
-			ptext.setText(ti.picsign);
+			ptext.setText(ti.figsign);
 			Typeface tf1 = Typeface.createFromAsset(getAssets(),
 					"fonts/GothaProReg.otf");
 			ptext.setTypeface(tf1);

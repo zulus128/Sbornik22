@@ -88,7 +88,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <ScrollView
+    <com.vkassin.sbornik22.MyScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/LinLayout_razdel000018"
@@ -144,10 +144,11 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/dotted1" />
 
-                <ImageView
+                <com.vkassin.sbornik22.TouchImageView
                     android:id="@+id/imagePicture"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter" />
 
                 <!--
             <WebView
@@ -187,7 +188,7 @@
                 </TextView>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </com.vkassin.sbornik22.MyScrollView>
 
     <RelativeLayout
         android:id="@+id/LinLayout_detailTask01"

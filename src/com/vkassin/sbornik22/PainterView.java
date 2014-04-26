@@ -79,7 +79,7 @@ public class PainterView extends ImageView {
 	    mCanvas = new Canvas();               
 	}
 	
-	/*
+	
 	int width, height;
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
@@ -122,7 +122,7 @@ public class PainterView extends ImageView {
 	@Override
 	public void setImageBitmap(Bitmap bm) {
 		super.setImageBitmap(bm);
-		if (bm != 0) {
+//		if (bm != 0) {
 			if (bmWidth != bm.getWidth() & bmHeight != bm.getHeight()) {
 				bmWidth = bm.getWidth();
 				bmHeight = bm.getHeight();
@@ -132,7 +132,7 @@ public class PainterView extends ImageView {
 				bmHeight = bm.getHeight();
 			}
 
-		}
+//		}
 	}
 	
 	
@@ -143,24 +143,24 @@ public class PainterView extends ImageView {
 		if(redraw){
 			mBitmap.eraseColor(Color.TRANSPARENT);
 			mCanvas.setMatrix(tmpMatrix);
-			for (DrawInf inf:paths){
-				tmpPaint.setColor(inf.color);
-				tmpPaint.setStrokeWidth(inf.width);
-				erasePaint.setStrokeWidth(inf.width);
-				if(inf.isPath()){
-					if(inf.erase){
-						mCanvas.drawPath(inf.path, erasePaint);
-					}else{
-						mCanvas.drawPath(inf.path, tmpPaint);
-					}
-				}else{
-					if(inf.erase){
-						mCanvas.drawPoint(inf.point.x, inf.point.y, erasePaint);
-					}else{
-						mCanvas.drawPoint(inf.point.x, inf.point.y, tmpPaint);
-					}
-				}
-			}
+//			for (DrawInf inf:paths){
+//				tmpPaint.setColor(inf.color);
+//				tmpPaint.setStrokeWidth(inf.width);
+//				erasePaint.setStrokeWidth(inf.width);
+//				if(inf.isPath()){
+//					if(inf.erase){
+//						mCanvas.drawPath(inf.path, erasePaint);
+//					}else{
+//						mCanvas.drawPath(inf.path, tmpPaint);
+//					}
+//				}else{
+//					if(inf.erase){
+//						mCanvas.drawPoint(inf.point.x, inf.point.y, erasePaint);
+//					}else{
+//						mCanvas.drawPoint(inf.point.x, inf.point.y, tmpPaint);
+//					}
+//				}
+//			}
 			redraw = false;
 		}
 		
@@ -172,12 +172,12 @@ public class PainterView extends ImageView {
 	private static final float TOUCH_TOLERANCE = 0;
 
 	private void touch_start(float x, float y) {
-		undonePaths.clear();
+//		undonePaths.clear();
 		mPoint = new Point((int)x,(int)y);
-	    paths.add(new DrawInf(mPoint,mPaint.getColor(),mPaint.getStrokeWidth(), eraseMode));
+//	    paths.add(new DrawInf(mPoint,mPaint.getColor(),mPaint.getStrokeWidth(), eraseMode));
 	    mCanvas.drawPoint(x, y, mPaint);
 		mPath = new Path();
-		paths.add(new DrawInf(mPath,mPaint.getColor(),mPaint.getStrokeWidth(), eraseMode));
+//		paths.add(new DrawInf(mPath,mPaint.getColor(),mPaint.getStrokeWidth(), eraseMode));
 		mPath.reset();
         mPath.moveTo(x, y);
         mX = x;
@@ -304,14 +304,14 @@ public class PainterView extends ImageView {
 	        float y = event.getY(0) - event.getY(1);
 	        return FloatMath.sqrt(x * x + y * y);
 	    }
-*/
+
 	    /*
 	     * --------------------------------------------------------------------------
 	     * Method: midPoint Parameters: PointF object, MotionEvent Returns: void
 	     * Description: calculates the midpoint between the two fingers
 	     * ------------------------------------------------------------
 	     */
-/*
+
 	    private void midPoint(PointF point, MotionEvent event) 
 	    {
 	        float x = event.getX(0) + event.getX(1);
@@ -320,19 +320,19 @@ public class PainterView extends ImageView {
 	    }
 	    
 
-	@Override
-	public void colorChanged(int color) {
-		mPaint.setColor(color);
-	}
-	
-	public void clear(){
-		paths.clear();
-		undonePaths.clear();
-		mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-		mCanvas = new Canvas(mBitmap);
-		mCanvas.setMatrix(tmpMatrix);
-		invalidate();
-	}
+//	@Override
+//	public void colorChanged(int color) {
+//		mPaint.setColor(color);
+//	}
+//	
+//	public void clear(){
+//		paths.clear();
+//		undonePaths.clear();
+//		mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+//		mCanvas = new Canvas(mBitmap);
+//		mCanvas.setMatrix(tmpMatrix);
+//		invalidate();
+//	}
 	
 	public void setWidht(int widht){
 		mPaint.setStrokeWidth(widht);
@@ -343,10 +343,10 @@ public class PainterView extends ImageView {
 		mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
 	}
 	
-	public void paintMode(){
-		eraseMode = false;
-		mPaint.setXfermode(0);
-	}
+//	public void paintMode(){
+//		eraseMode = false;
+//		mPaint.setXfermode(0);
+//	}
 	
 	public Bitmap getBitmap(){
 		return getDrawingCache();
@@ -359,32 +359,32 @@ public class PainterView extends ImageView {
 		redraw = true;
 	}
 	
-	public void Undo(){
-		if (paths.size()>0) {
-			if(!paths.getLast().isPath()){
-				undonePaths.add(paths.removeLast());
-				invalidate();
-			}else{
-				undonePaths.add(paths.removeLast());
-				undonePaths.add(paths.removeLast());
-				invalidate();
-			}
-		       
-		}
-		redraw = true;
-	}
-	
-	public void Redo(){
-		if (undonePaths.size()>0) {
-		       paths.add(undonePaths.removeLast());
-		       invalidate();
-		       if(undonePaths.getLast().isPath()){
-		    	   paths.add(undonePaths.removeLast());
-		    	   invalidate();
-		       }
-		}
-		redraw = true;
-	}
+//	public void Undo(){
+//		if (paths.size()>0) {
+//			if(!paths.getLast().isPath()){
+//				undonePaths.add(paths.removeLast());
+//				invalidate();
+//			}else{
+//				undonePaths.add(paths.removeLast());
+//				undonePaths.add(paths.removeLast());
+//				invalidate();
+//			}
+//		       
+//		}
+//		redraw = true;
+//	}
+//	
+//	public void Redo(){
+//		if (undonePaths.size()>0) {
+//		       paths.add(undonePaths.removeLast());
+//		       invalidate();
+//		       if(undonePaths.getLast().isPath()){
+//		    	   paths.add(undonePaths.removeLast());
+//		    	   invalidate();
+//		       }
+//		}
+//		redraw = true;
+//	}
 	
 	public void dragMode(){
 		dragMode = true;
@@ -417,5 +417,5 @@ public class PainterView extends ImageView {
 	private float getMatrixScale(Matrix matrix) {
 	    matrix.getValues(mTmpValues);
 	    return mTmpValues[Matrix.MSCALE_X];
-	}*/
+	}
 }

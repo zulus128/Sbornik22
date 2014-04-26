@@ -35,36 +35,6 @@ public class DetailTaskActivity extends Activity {
 	private static final String TAG = "Sbornik.DetailTaskActivity";
 	private TaskItem ti;
 
-	// step 1: add some instance
-	private float mScale = 1f;
-	private ScaleGestureDetector mScaleDetector;
-	GestureDetector gestureDetector;
-
-	// step 4: add private class GestureListener
-
-	private class GestureListener extends
-			GestureDetector.SimpleOnGestureListener {
-		@Override
-		public boolean onDown(MotionEvent e) {
-			return true;
-		}
-
-		// event when double tap occurs
-		@Override
-		public boolean onDoubleTap(MotionEvent e) {
-			// double tap fired.
-
-			ScaleAnimation scaleAnimation = new ScaleAnimation(1, 1, 1, 1, 0, 0);
-			scaleAnimation.setDuration(0);
-			scaleAnimation.setFillAfter(true);
-			// ScrollView layout =(ScrollView) findViewById(R.id.DetailScroll);
-			// ImageView layout =(ImageView) findViewById(R.id.imagePicture);
-			LinearLayout layout = (LinearLayout) findViewById(R.id.linDetail);
-			layout.startAnimation(scaleAnimation);
-			return true;
-		}
-	}
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -119,9 +89,19 @@ public class DetailTaskActivity extends Activity {
 			String uri = "drawable/" + ti.pic;
 			int imageResource = getResources().getIdentifier(uri, null,
 					getPackageName());
-			ImageView imgPic = (ImageView) this.findViewById(R.id.imagePicture);
+//			ImageView imgPic = (ImageView) this.findViewById(R.id.imagePicture);
+//			imgPic.setImageResource(imageResource);
+
+//			ZoomableImageView imgPic = (ZoomableImageView) this.findViewById(R.id.imagePicture);
+//			PainterView imgPic = (PainterView) this.findViewById(R.id.imagePicture);
+			TouchImageView imgPic = (TouchImageView) this.findViewById(R.id.imagePicture);
 			imgPic.setImageResource(imageResource);
 
+//			Bitmap bm = BitmapFactory.decodeResource(getResources(), imageResource);
+//			imgPic.setImageBitmap(bm);
+
+//			zoomableImageView.setImageBitmap( bitmap );
+			
 			// ZoomableImageView imgPic = (ZoomableImageView)
 			// this.findViewById(R.id.imagePicture);
 			// Bitmap bm = BitmapFactory.decodeResource(getResources(),
@@ -148,48 +128,48 @@ public class DetailTaskActivity extends Activity {
 
 		setFavButton();
 
-		gestureDetector = new GestureDetector(this, new GestureListener());
-
-		mScaleDetector = new ScaleGestureDetector(this,
-				new ScaleGestureDetector.SimpleOnScaleGestureListener() {
-					@Override
-					public boolean onScale(ScaleGestureDetector detector) {
-						float scale = 1 - detector.getScaleFactor();
-
-						float prevScale = mScale;
-						mScale += scale;
-
-						if (mScale < 0.5f) // Minimum scale condition:
-							mScale = 0.5f;
-
-						if (mScale > 1f) // Maximum scale condition:
-							mScale = 1f;
-						ScaleAnimation scaleAnimation = new ScaleAnimation(
-								1f / prevScale, 1f / mScale, 1f / prevScale,
-								1f / mScale, detector.getFocusX(), detector
-										.getFocusY());
-						scaleAnimation.setDuration(0);
-						scaleAnimation.setFillAfter(true);
-						// ScrollView layout =(ScrollView)
-						// findViewById(R.id.DetailScroll);
-						// ImageView layout =(ImageView)
-						// findViewById(R.id.imagePicture);
-						LinearLayout layout = (LinearLayout) findViewById(R.id.linDetail);
-						layout.startAnimation(scaleAnimation);
-						return true;
-					}
-				});
+//		gestureDetector = new GestureDetector(this, new GestureListener());
+//
+//		mScaleDetector = new ScaleGestureDetector(this,
+//				new ScaleGestureDetector.SimpleOnScaleGestureListener() {
+//					@Override
+//					public boolean onScale(ScaleGestureDetector detector) {
+//						float scale = 1 - detector.getScaleFactor();
+//
+//						float prevScale = mScale;
+//						mScale += scale;
+//
+//						if (mScale < 0.5f) // Minimum scale condition:
+//							mScale = 0.5f;
+//
+//						if (mScale > 1f) // Maximum scale condition:
+//							mScale = 1f;
+//						ScaleAnimation scaleAnimation = new ScaleAnimation(
+//								1f / prevScale, 1f / mScale, 1f / prevScale,
+//								1f / mScale, detector.getFocusX(), detector
+//										.getFocusY());
+//						scaleAnimation.setDuration(0);
+//						scaleAnimation.setFillAfter(true);
+//						// ScrollView layout =(ScrollView)
+//						// findViewById(R.id.DetailScroll);
+//						// ImageView layout =(ImageView)
+//						// findViewById(R.id.imagePicture);
+//						LinearLayout layout = (LinearLayout) findViewById(R.id.linDetail);
+//						layout.startAnimation(scaleAnimation);
+//						return true;
+//					}
+//				});
 
 	}
 
 	// step 3: override dispatchTouchEvent()
-	@Override
-	public boolean dispatchTouchEvent(MotionEvent event) {
-		super.dispatchTouchEvent(event);
-		mScaleDetector.onTouchEvent(event);
-		gestureDetector.onTouchEvent(event);
-		return gestureDetector.onTouchEvent(event);
-	}
+//	@Override
+//	public boolean dispatchTouchEvent(MotionEvent event) {
+//		super.dispatchTouchEvent(event);
+//		mScaleDetector.onTouchEvent(event);
+//		gestureDetector.onTouchEvent(event);
+//		return gestureDetector.onTouchEvent(event);
+//	}
 
 	private void refresh() {
 

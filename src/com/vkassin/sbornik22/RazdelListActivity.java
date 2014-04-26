@@ -64,8 +64,8 @@ public class RazdelListActivity extends Activity {
 				"fonts/GothaProReg.otf");
 		text.setTypeface(tf);
 
-		Common.app_ctx = getApplicationContext();
-		Common.loadDatabase();
+//		Common.app_ctx = getApplicationContext();
+//		Common.loadDatabase();
 
 //		ImageView okno = (ImageView) this.findViewById(R.id.imageOkno);
 //		okno.setOnClickListener(new OnClickListener() {

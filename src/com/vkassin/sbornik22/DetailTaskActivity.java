@@ -71,6 +71,8 @@ public class DetailTaskActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.detailtask_activity);
 
+//		this.overridePendingTransition(0, 0);
+		
 		ti = Common.getCurTask();
 
 		TextView tv = (TextView) this.findViewById(R.id.DetailTaskTextView);

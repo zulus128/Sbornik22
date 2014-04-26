@@ -67,16 +67,16 @@ public class RazdelListActivity extends Activity {
 		Common.app_ctx = getApplicationContext();
 		Common.loadDatabase();
 
-		ImageView okno = (ImageView) this.findViewById(R.id.imageOkno);
-		okno.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				v.setVisibility(View.GONE);
-			}
-
-		});
+//		ImageView okno = (ImageView) this.findViewById(R.id.imageOkno);
+//		okno.setOnClickListener(new OnClickListener() {
+//
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//
+//				v.setVisibility(View.GONE);
+//			}
+//
+//		});
 
 		list = (ListView) this.findViewById(R.id.RazdelList);
 		adapter = new RazdelArrayAdapter(this, R.layout.razdel_item,
@@ -139,7 +139,13 @@ public class RazdelListActivity extends Activity {
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 
-						RazdelListActivity.super.onBackPressed();
+//						RazdelListActivity.super.onBackPressed();
+						
+						Intent intent = new Intent(RazdelListActivity.this, StartActivity.class);
+						intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						intent.putExtra("Exit me", true);
+						startActivity(intent);
+						finish();
 					}
 				});
 		builder.setNegativeButton(R.string.case4,

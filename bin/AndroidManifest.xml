@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.vkassin.sbornik22.RazdelListActivity"
+            android:name="com.vkassin.sbornik22.StartActivity"
             android:label="@string/app_name"
             android:theme="@style/splashScreenTheme" >
             <intent-filter>
@@ -24,6 +24,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.vkassin.sbornik22.RazdelListActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
             android:name="com.vkassin.sbornik22.TaskListActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
@@ -31,7 +36,7 @@
         <activity
             android:name="com.vkassin.sbornik22.DetailTaskActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            android:theme="@style/noAnimTheme" >
         </activity>
         <activity
             android:name="com.vkassin.sbornik22.AnswerActivity"

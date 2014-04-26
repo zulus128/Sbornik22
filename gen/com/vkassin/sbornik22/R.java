@@ -273,24 +273,24 @@ public final class R {
         public static final int DetailTaskTextView=0x7f09001b;
         public static final int LinLayout_detailTask01=0x7f090011;
         public static final int LinLayout_detailTask02=0x7f090024;
-        public static final int LinLayout_detailTask051=0x7f090037;
+        public static final int LinLayout_detailTask051=0x7f090036;
         public static final int LinLayout_razdel000=0x7f09002a;
         public static final int LinLayout_razdel0000=0x7f090039;
         public static final int LinLayout_razdel00001=0x7f090017;
         public static final int LinLayout_razdel000018=0x7f090006;
         public static final int LinLayout_razdel01=0x7f09002c;
         public static final int LinLayout_task01=0x7f09003b;
-        public static final int LinLayout_title=0x7f090034;
+        public static final int LinLayout_title=0x7f090033;
         public static final int PictureTaskId=0x7f090021;
         public static final int PictureTaskTitle=0x7f090022;
         public static final int PictureTextView=0x7f090025;
         public static final int RazdelList=0x7f09002d;
-        public static final int RazdelNameTextView=0x7f090031;
-        public static final int RazdelTextView=0x7f090032;
+        public static final int RazdelNameTextView=0x7f090030;
+        public static final int RazdelTextView=0x7f090031;
         public static final int RelLayout_TasList01=0x7f090038;
         public static final int RelLayout_TasList012=0x7f090016;
         public static final int RelLayout_TasList0122=0x7f090000;
-        public static final int RelLayout_TasList0123=0x7f090033;
+        public static final int RelLayout_TasList0123=0x7f090032;
         public static final int RelLayout_picture00=0x7f09001e;
         public static final int RelLayout_picture01=0x7f09001f;
         public static final int RelLayout_razdelTask01=0x7f090029;
@@ -310,7 +310,7 @@ public final class R {
         public static final int button_left=0x7f090012;
         public static final int button_my=0x7f090028;
         public static final int button_networks=0x7f090005;
-        public static final int button_ok=0x7f090036;
+        public static final int button_ok=0x7f090035;
         public static final int button_pic=0x7f090027;
         public static final int button_question=0x7f090013;
         public static final int button_right=0x7f090015;
@@ -323,14 +323,14 @@ public final class R {
         public static final int imageDiv2=0x7f09000e;
         public static final int imageId=0x7f090020;
         public static final int imageMy=0x7f090023;
-        public static final int imageOkno=0x7f09002e;
+        public static final int imageOkno=0x7f090037;
         public static final int imagePicture=0x7f09000d;
         public static final int imageStatus=0x7f090041;
         public static final int imageTitle=0x7f090001;
         public static final int linDetail=0x7f09000b;
-        public static final int razdelImageT=0x7f090030;
-        public static final int razdelItemRel=0x7f09002f;
-        public static final int topic=0x7f090035;
+        public static final int razdelImageT=0x7f09002f;
+        public static final int razdelItemRel=0x7f09002e;
+        public static final int topic=0x7f090034;
     }
     public static final class layout {
         public static final int answer_activity=0x7f030000;
@@ -339,8 +339,9 @@ public final class R {
         public static final int razdel_activity=0x7f030003;
         public static final int razdel_item=0x7f030004;
         public static final int search_activity=0x7f030005;
-        public static final int tasklist_activity=0x7f030006;
-        public static final int tasklist_item=0x7f030007;
+        public static final int start_activity=0x7f030006;
+        public static final int tasklist_activity=0x7f030007;
+        public static final int tasklist_item=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -375,11 +376,13 @@ public final class R {
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
 
         
          */
@@ -388,6 +391,7 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int noAnimTheme=0x7f070003;
         public static final int splashScreenTheme=0x7f070002;
     }
 }

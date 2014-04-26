@@ -111,11 +111,4 @@
         </ListView>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageOkno"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/okno_0" />
-
 </RelativeLayout>

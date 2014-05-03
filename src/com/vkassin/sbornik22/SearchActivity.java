@@ -38,6 +38,8 @@ public class SearchActivity extends Activity {
 		Common.isFavourites = false;
 
 		Intent i = new Intent(SearchActivity.this, TaskListActivity.class);
+		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+				| Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		startActivity(i);
 	}
 

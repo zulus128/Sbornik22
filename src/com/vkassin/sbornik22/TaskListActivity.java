@@ -27,10 +27,23 @@ public class TaskListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tasklist_activity);
 
+//		setTasks();
+		
+		run = new Runnable(){
+            public void run(){
+
+            	adapter.notifyDataSetChanged();
+            	list.invalidateViews();
+            	list.refreshDrawableState();
+            }
+       };
+	}
+
+	private void setTasks() {
+
 		TextView title = (TextView) this.findViewById(R.id.TaskListTitle01);
 		title.setText(Common.isFavourites?"Мои задачи":Common.secondListTitle);
 
-		list = (ListView) this.findViewById(R.id.TaskList);
 		ArrayList<TaskItem> filteredTasks = new ArrayList<TaskItem>();
 		for (Iterator<TaskItem> it = Common.tasks.iterator(); it.hasNext();) {
 
@@ -65,11 +78,12 @@ public class TaskListActivity extends Activity {
 			}
 		}
 		
+		list = (ListView) this.findViewById(R.id.TaskList);
+
 		Common.filteredTasks = filteredTasks;
 		adapter = new TaskArrayAdapter(this, R.layout.tasklist_item,
 				filteredTasks);
 		list.setAdapter(adapter);
-
 		list.setOnItemClickListener(new OnItemClickListener() {
 
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -85,17 +99,10 @@ public class TaskListActivity extends Activity {
 
 			}
 		});
-		
-		run = new Runnable(){
-            public void run(){
 
-            	adapter.notifyDataSetChanged();
-            	list.invalidateViews();
-            	list.refreshDrawableState();
-            }
-       };
+
 	}
-
+	
 	@Override
 	public void onBackPressed() {
 
@@ -109,6 +116,8 @@ public class TaskListActivity extends Activity {
 	
 		super.onResume();
 		
+		setTasks();
+
 //		Log.i(TAG, "--onResume");
 		runOnUiThread(run);
 	};

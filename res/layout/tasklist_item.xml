@@ -21,7 +21,7 @@
             android:gravity="center_horizontal"
             android:paddingTop="5dp"
             android:textColor="@color/MyDottedGray"
-            android:textSize="15sp" >
+            android:textSize="16sp" >
         </TextView>
     </LinearLayout>
 
@@ -40,7 +40,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
             android:textColor="@color/MyOrange"
-            android:textSize="15sp" >
+            android:textSize="16sp" >
         </TextView>
 
         <ImageView
@@ -59,7 +59,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
             android:textColor="@color/MyDarkGray"
-            android:textSize="11sp" >
+            android:textSize="13sp" >
         </TextView>
     </LinearLayout>
 

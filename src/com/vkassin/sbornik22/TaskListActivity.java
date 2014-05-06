@@ -27,7 +27,7 @@ public class TaskListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tasklist_activity);
 
-//		setTasks();
+		setTasks();
 		
 		run = new Runnable(){
             public void run(){

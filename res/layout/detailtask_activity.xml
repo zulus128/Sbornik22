@@ -81,6 +81,7 @@
             android:id="@+id/DetTaskListTitle01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
             android:text="@string/title_label"
             android:textColor="@color/White"
             android:textSize="12sp"
@@ -90,10 +91,10 @@
     <com.vkassin.sbornik22.MyScrollView
         android:id="@+id/DetailScroll"
         android:layout_width="fill_parent"
-        android:layout_marginTop="12dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/LinLayout_razdel00001"
-        android:layout_marginBottom="55dp" >
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="12dp" >
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -113,7 +114,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="center_horizontal|center_vertical"
                     android:textColor="@color/MyOrange"
-                    android:textSize="16sp" >
+                    android:textSize="15sp" >
                 </TextView>
 
                 <TextView
@@ -191,52 +192,52 @@
             </LinearLayout>
         </LinearLayout>
     </com.vkassin.sbornik22.MyScrollView>
-        
-        <RelativeLayout
-            android:id="@+id/LinLayout_detailTask01"
-            android:layout_width="fill_parent"
+
+    <RelativeLayout
+        android:id="@+id/LinLayout_detailTask01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/MyGray" >
+
+        <ImageButton
+            android:id="@+id/button_left"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/MyGray" >
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/dicon_09"
+            android:onClick="goBack" />
 
-            <ImageButton
-                android:id="@+id/button_left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:background="@drawable/dicon_09"
-                android:onClick="goBack" />
+        <ImageButton
+            android:id="@+id/detail_button_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/dicon_11"
+            android:onClick="goMy"
+            android:scaleType="fitXY" />
 
-            <ImageButton
-                android:id="@+id/detail_button_my"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:background="@drawable/dicon_11"
-                android:onClick="goMy"
-                android:scaleType="fitXY" />
+        <ImageButton
+            android:id="@+id/button_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/detail_button_my"
+            android:background="@null"
+            android:onClick="goAnswer"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/button_answer_custom" />
 
-            <ImageButton
-                android:id="@+id/button_answer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/detail_button_my"
-                android:background="@null"
-                android:onClick="goAnswer"
-                android:paddingBottom="10dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp"
-                android:src="@drawable/button_answer_custom" />
-
-            <ImageButton
-                android:id="@+id/button_right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/dicon_10"
-                android:onClick="goForward" />
-        </RelativeLayout>
+        <ImageButton
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/dicon_10"
+            android:onClick="goForward" />
+    </RelativeLayout>
 
 </RelativeLayout>

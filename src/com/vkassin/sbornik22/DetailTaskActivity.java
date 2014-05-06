@@ -55,9 +55,6 @@ public class DetailTaskActivity extends Activity {
 		title.setText("БЭГ / " + Common.curRazdelName + " / ЗАДАЧА № "
 				+ ti.getId());
 
-		// ImageView imgMy1 = (ImageView) this.findViewById(R.id.imageMy);
-		// imgMy1.setVisibility((ti.my1 == 1) ? View.VISIBLE : View.GONE);
-
 		TextView idd = (TextView) this.findViewById(R.id.DetailNumTextView);
 		idd.setText("" + ti.getId());
 		TextView idname = (TextView) this.findViewById(R.id.DetailNameTextView);

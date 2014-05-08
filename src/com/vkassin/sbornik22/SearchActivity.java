@@ -2,6 +2,7 @@ package com.vkassin.sbornik22;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -15,6 +16,11 @@ public class SearchActivity extends Activity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.search_activity);
+
+		Typeface tf = Typeface.createFromAsset(getAssets(),
+		"fonts/GothaProReg.otf");
+		TextView title = (TextView) this.findViewById(R.id.DetTaskListTitle01);
+		title.setTypeface(tf);
 
 	}
 

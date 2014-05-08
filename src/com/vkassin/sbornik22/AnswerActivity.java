@@ -59,7 +59,8 @@ public class AnswerActivity extends Activity {
 		TextView title = (TextView) this.findViewById(R.id.AnswerTitle01);
 		title.setText("БЭГ / " + Common.curRazdelName + " / ЗАДАЧА № "
 				+ ti.getId() + " / ОТВЕТ");
-
+		title.setTypeface(tf);
+		
 		if (ti.fig.equals("")) {
 
 			ImageView imgDiv1 = (ImageView) this.findViewById(R.id.imageDiv1);

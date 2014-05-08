@@ -5,7 +5,7 @@
     android:background="@drawable/okno_04"
     tools:context=".TaskListActivity" >
 
-      <RelativeLayout
+    <RelativeLayout
         android:id="@+id/RelLayout_TasList0123"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -91,29 +91,31 @@
     <LinearLayout
         android:id="@+id/LinLayout_detailTask01"
         android:layout_width="fill_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/LinLayout_title"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal" >
 
         <EditText
             android:id="@+id/topic"
             android:layout_width="250dp"
-            android:layout_height="30dp"
-            android:textSize="14sp"
-            android:hint="@string/topic_hint"
+            android:layout_height="40dp"
             android:background="@drawable/searchbox"
-            android:inputType="text" />
+            android:hint="@string/topic_hint"
+            android:inputType="text"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_ok"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:onClick="goSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="5dp"
-            android:scaleType="fitXY"
             android:background="@drawable/round_button"
+            android:onClick="goSearch"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitXY"
             android:text="@string/OK" />
     </LinearLayout>
 

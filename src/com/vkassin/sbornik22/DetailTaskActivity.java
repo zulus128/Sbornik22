@@ -54,7 +54,8 @@ public class DetailTaskActivity extends Activity {
 		TextView title = (TextView) this.findViewById(R.id.DetTaskListTitle01);
 		title.setText("БЭГ / " + Common.curRazdelName + " / ЗАДАЧА № "
 				+ ti.getId());
-
+		title.setTypeface(tf);
+		
 		TextView idd = (TextView) this.findViewById(R.id.DetailNumTextView);
 		idd.setText("" + ti.getId());
 		TextView idname = (TextView) this.findViewById(R.id.DetailNameTextView);

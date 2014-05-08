@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -43,7 +44,10 @@ public class TaskListActivity extends Activity {
 
 		TextView title = (TextView) this.findViewById(R.id.TaskListTitle01);
 		title.setText(Common.isFavourites?"Мои задачи":Common.secondListTitle);
-
+		Typeface tf = Typeface.createFromAsset(getAssets(),
+				"fonts/GothaProReg.otf");
+		title.setTypeface(tf);
+		
 		ArrayList<TaskItem> filteredTasks = new ArrayList<TaskItem>();
 		for (Iterator<TaskItem> it = Common.tasks.iterator(); it.hasNext();) {
 

@@ -5,43 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <!--
-    <ImageView
-        android:id="@+id/razdelLock"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/dicon_07" />
-    -->
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@android:color/transparent"
         android:orientation="horizontal"
-        android:paddingBottom="13dp"
-        android:paddingLeft="13dp"
-        android:paddingTop="13dp" >
+        android:paddingBottom="@dimen/icon_otstup"
+        android:paddingLeft="@dimen/icon_otstup"
+        android:paddingTop="@dimen/icon_otstup" >
 
         <ImageView
             android:id="@+id/razdelImageT"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:orientation="vertical"
-            android:paddingLeft="13dp" >
+            android:paddingLeft="@dimen/icon_otstup" >
 
             <TextView
                 android:id="@+id/RazdelNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/MyDarkGray"
-                android:textSize="16sp"
+                android:textSize="@dimen/head_text_scr12"
                 android:textStyle="bold" >
             </TextView>
 
@@ -59,7 +50,7 @@
                 android:maxLines="2"
                 android:minLines="2"
                 android:textColor="@color/MyDarkGray"
-                android:textSize="13sp" >
+                android:textSize="@dimen/subhead_text_scr12" >
             </TextView>
         </LinearLayout>
     </LinearLayout>

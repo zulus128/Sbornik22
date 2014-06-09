@@ -114,7 +114,7 @@
                     android:layout_centerVertical="true"
                     android:gravity="center_horizontal|center_vertical"
                     android:textColor="@color/MyDottedGray"
-                    android:textSize="15sp" >
+                    android:textSize="@dimen/task_numbers_scr3" >
                 </TextView>
 
                 <TextView
@@ -125,7 +125,7 @@
                     android:layout_toRightOf="@+id/DetailNumTextView"
                     android:gravity="center_vertical"
                     android:textColor="@color/MyOrange"
-                    android:textSize="17sp" >
+                    android:textSize="@dimen/task_names_scr3" >
                 </TextView>
 
                 <ImageView
@@ -177,7 +177,7 @@
                     android:paddingRight="35dp"
                     android:paddingTop="5dp"
                     android:textColor="@color/MyDarkGray"
-                    android:textSize="12sp" >
+                    android:textSize="@dimen/task_podpis" >
                 </TextView>
 
                 <TextView
@@ -189,7 +189,7 @@
                     android:paddingRight="24dp"
                     android:paddingTop="5dp"
                     android:textColor="@color/MyDarkGray"
-                    android:textSize="15sp" >
+                    android:textSize="@dimen/task_text" >
                 </TextView>
             </LinearLayout>
         </LinearLayout>

@@ -164,17 +164,24 @@ public final class R {
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
-
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
-    
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
         public static final int bottompanel_horizontal_margin=0x7f050002;
         public static final int bottompanel_vertical_margin=0x7f050003;
+        public static final int head_text_scr12=0x7f050007;
+        public static final int icon_otstup=0x7f050011;
+        public static final int icon_size=0x7f050010;
         public static final int razdelcell_horizontal_margin=0x7f050004;
         public static final int razdelcellsubtitle_horizontal_margin=0x7f050005;
+        public static final int subhead_text_scr12=0x7f050008;
+        public static final int task_name_bottom=0x7f05000b;
+        public static final int task_names=0x7f05000a;
+        public static final int task_names_scr3=0x7f05000d;
+        public static final int task_numbers=0x7f050009;
+        public static final int task_numbers_scr3=0x7f05000c;
+        public static final int task_podpis=0x7f05000f;
+        public static final int task_text=0x7f05000e;
         public static final int tasklistitem_horizontal_margin=0x7f050006;
     }
     public static final class drawable {

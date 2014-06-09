@@ -21,7 +21,7 @@
             android:gravity="center_horizontal"
             android:paddingTop="5dp"
             android:textColor="@color/MyDottedGray"
-            android:textSize="16sp" >
+            android:textSize="@dimen/task_numbers" >
         </TextView>
     </LinearLayout>
 
@@ -35,12 +35,12 @@
         <TextView
             android:id="@+id/TaskNameTextView"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_height="@dimen/task_name_bottom"
             android:paddingBottom="7dp"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
             android:textColor="@color/MyOrange"
-            android:textSize="17sp" >
+            android:textSize="@dimen/task_names" >
         </TextView>
 
         <ImageView
@@ -59,7 +59,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
             android:textColor="@color/MyDarkGray"
-            android:textSize="13sp" >
+            android:textSize="@dimen/subhead_text_scr12" >
         </TextView>
     </LinearLayout>
 

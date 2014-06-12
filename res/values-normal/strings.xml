@@ -4,7 +4,7 @@
     <string name="app_name">Sbornik22</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_label">БЭГ DEFAULT</string>
+    <string name="title_label">БЭГ NORMAL</string>
     <string name="title_label_search">БЭГ / ПОИСК ПО БАЗЕ ДАННЫХ</string>
     <string name="buttitle_info">info</string>
     <string name="buttitle_fav">favorites</string>

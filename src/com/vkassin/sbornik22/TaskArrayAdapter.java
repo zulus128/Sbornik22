@@ -15,21 +15,24 @@ public class TaskArrayAdapter extends ArrayAdapter<TaskItem> {
 
 	private ArrayList<TaskItem> items;
 	private Context ctx;
-
+	private LayoutInflater inflater;
+	
 	public TaskArrayAdapter(Context context, int resourceId, ArrayList<TaskItem> objects) {
 		
 		super(context, resourceId, objects);
 		
 		this.items = objects;
 		this.ctx = context;
+//		inflater = (LayoutInflater)context.getSystemService
+//			      (Context.LAYOUT_INFLATER_SERVICE);
+		inflater = LayoutInflater.from(context);
+
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		LayoutInflater vi = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
     	if(convertView == null)
-    		convertView= vi.inflate(R.layout.tasklist_item, null);
+    		convertView= inflater.inflate(R.layout.tasklist_item, null);
 
     	TaskItem item = getItems().get(position);
     	if (item != null) {

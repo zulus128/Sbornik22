@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,10 @@ public class RazdelArrayAdapter extends ArrayAdapter<RazdelItem> {
 
 	private ArrayList<RazdelItem> items;
 	private Context ctx;
+	private LayoutInflater inflater;
 
-	// private int resourceId;
+
+	private static final String TAG = "Sbornik.RazdelArrayAdapter";
 
 	public RazdelArrayAdapter(Context context, int resourceId,
 			ArrayList<RazdelItem> objects) {
@@ -25,16 +28,19 @@ public class RazdelArrayAdapter extends ArrayAdapter<RazdelItem> {
 
 		this.items = objects;
 		this.ctx = context;
-		// this.resourceId = resourceId;
-	}
+//		inflater = (LayoutInflater)context.getSystemService
+//			      (Context.LAYOUT_INFLATER_SERVICE);
+		inflater = LayoutInflater.from(context);
+
+		}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		LayoutInflater vi = (LayoutInflater) ctx
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		if (convertView == null)
-			convertView = vi.inflate(R.layout.razdel_item, null);
+//		Log.i(TAG, "" + inflater);
+			
+       if (convertView == null)
+			convertView = inflater.inflate(R.layout.razdel_item, null);
 
 		RazdelItem item = getItems().get(position);
 		if (item != null) {

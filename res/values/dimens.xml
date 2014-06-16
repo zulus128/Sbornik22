@@ -8,5 +8,17 @@
     <dimen name="razdelcell_horizontal_margin">10dp</dimen>
     <dimen name="razdelcellsubtitle_horizontal_margin">20dp</dimen>
     <dimen name="tasklistitem_horizontal_margin">20dp</dimen>
-    
+
+    <dimen name="head_text_scr12">16sp</dimen>
+    <dimen name="subhead_text_scr12">13sp</dimen>
+    <dimen name="task_numbers">16sp</dimen>
+    <dimen name="task_names">17sp</dimen>
+    <dimen name="task_name_bottom">32dp</dimen>
+    <dimen name="task_numbers_scr3">15sp</dimen>
+    <dimen name="task_names_scr3">16sp</dimen>
+    <dimen name="task_text">15sp</dimen>
+    <dimen name="task_podpis">12sp</dimen>
+    <dimen name="icon_size">50dp</dimen>
+    <dimen name="icon_otstup">13dp</dimen>
+
 </resources>

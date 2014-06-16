@@ -710,26 +710,28 @@ public class TouchImageView extends ImageView {
     }
     
     public boolean canScrollHorizontallyFroyo(int direction) {
-        return canScrollHorizontally(direction);
+    	//12        return  canScrollHorizontally(direction);
+    	return false;
     }
     
-    @Override
-    public boolean canScrollHorizontally(int direction) {
-    	matrix.getValues(m);
-    	float x = m[Matrix.MTRANS_X];
-    	
-    	if (getImageWidth() < viewWidth) {
-    		return false;
-    		
-    	} else if (x >= -1 && direction < 0) {
-    		return false;
-    		
-    	} else if (Math.abs(x) + viewWidth + 1 >= getImageWidth() && direction > 0) {
-    		return false;
-    	}
-    	
-    	return true;
-    }
+  //12
+//    @Override
+//    public boolean canScrollHorizontally(int direction) {
+//    	matrix.getValues(m);
+//    	float x = m[Matrix.MTRANS_X];
+//    	
+//    	if (getImageWidth() < viewWidth) {
+//    		return false;
+//    		
+//    	} else if (x >= -1 && direction < 0) {
+//    		return false;
+//    		
+//    	} else if (Math.abs(x) + viewWidth + 1 >= getImageWidth() && direction > 0) {
+//    		return false;
+//    	}
+//    	
+//    	return true;
+//    }
     
     /**
      * Gesture Listener detects a single click or long click and passes that on
@@ -766,7 +768,7 @@ public class TouchImageView extends ImageView {
         		fling.cancelFling();
         	}
         	fling = new Fling((int) velocityX, (int) velocityY);
-        	compatPostOnAnimation(fling);
+        	//12   	compatPostOnAnimation(fling);
         	return super.onFling(e1, e2, velocityX, velocityY);
         }
         
@@ -779,7 +781,7 @@ public class TouchImageView extends ImageView {
         	if (state == State.NONE) {
 	        	float targetZoom = (normalizedScale == minScale) ? maxScale : minScale;
 	        	DoubleTapZoom doubleTap = new DoubleTapZoom(targetZoom, e.getX(), e.getY(), false);
-	        	compatPostOnAnimation(doubleTap);
+	        	//12 compatPostOnAnimation(doubleTap);
 	        	consumed = true;
         	}
         	return consumed;
@@ -926,7 +928,7 @@ public class TouchImageView extends ImageView {
         	
         	if (animateToZoomBoundary) {
 	        	DoubleTapZoom doubleTap = new DoubleTapZoom(targetZoom, viewWidth / 2, viewHeight / 2, true);
-	        	compatPostOnAnimation(doubleTap);
+	        	//12 compatPostOnAnimation(doubleTap);
         	}
         }
     }
@@ -1012,7 +1014,7 @@ public class TouchImageView extends ImageView {
 				//
 				// We haven't finished zooming
 				//
-				compatPostOnAnimation(this);
+//12				compatPostOnAnimation(this);
 
 			} else {
 				//
@@ -1178,7 +1180,7 @@ public class TouchImageView extends ImageView {
 	            matrix.postTranslate(transX, transY);
 	            fixTrans();
 	            setImageMatrix(matrix);
-	            compatPostOnAnimation(this);
+	          //12   compatPostOnAnimation(this);
         	}
 		}
     }
@@ -1250,15 +1252,15 @@ public class TouchImageView extends ImageView {
     	}
     }
     
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-	private void compatPostOnAnimation(Runnable runnable) {
-    	if (VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN) {
-            postOnAnimation(runnable);
-            
-        } else {
-            postDelayed(runnable, 1000/60);
-        }
-    }
+//12    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+//	private void compatPostOnAnimation(Runnable runnable) {
+//    	if (VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN) {
+//            postOnAnimation(runnable);
+//            
+//        } else {
+//            postDelayed(runnable, 1000/60);
+//        }
+//    }
     
     private class ZoomVariables {
     	public float scale;

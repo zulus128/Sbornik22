@@ -32,25 +32,10 @@ public class RazdelListActivity extends Activity {
 	private ListView list;
 	private RazdelArrayAdapter adapter;
 
-//	@Override
-//	protected void onResume() {
-//	
-//		super.onResume();
-//		taskInfo();
-//		
-//	};
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-
-		// try {
-		// Thread.sleep(2000);
-		// } catch (InterruptedException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
 
 		setContentView(R.layout.razdel_activity);
 

@@ -1,15 +1,15 @@
 <resources>
 
-    <dimen name="head_text_scr12">16sp</dimen>
-    <dimen name="subhead_text_scr12">13sp</dimen>
-    <dimen name="task_numbers">16sp</dimen>
-    <dimen name="task_names">17sp</dimen>
-    <dimen name="task_name_bottom">32dp</dimen>
-    <dimen name="task_numbers_scr3">15sp</dimen>
-    <dimen name="task_names_scr3">16sp</dimen>
-    <dimen name="task_text">15sp</dimen>
-    <dimen name="task_podpis">12sp</dimen>
-    <dimen name="icon_size">50dp</dimen>
-    <dimen name="icon_otstup">13dp</dimen>
+    <dimen name="head_text_scr12">20sp</dimen>
+    <dimen name="subhead_text_scr12">15sp</dimen>
+    <dimen name="task_numbers">20sp</dimen>
+    <dimen name="task_names">21sp</dimen>
+    <dimen name="task_name_bottom">37dp</dimen>
+    <dimen name="task_numbers_scr3">20sp</dimen>
+    <dimen name="task_names_scr3">21sp</dimen>
+    <dimen name="task_text">17sp</dimen>
+    <dimen name="task_podpis">13sp</dimen>
+    <dimen name="icon_size">64dp</dimen>
+    <dimen name="icon_otstup">17dp</dimen>
     
 </resources>

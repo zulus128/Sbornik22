@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/RelLayout_TasList012"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/topicon_size"
         android:layout_alignParentTop="true"
         android:background="@drawable/panel_verh"
         android:paddingBottom="@dimen/bottompanel_vertical_margin"
@@ -17,14 +17,14 @@
 
         <ImageView
             android:id="@+id/imageTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:src="@drawable/dicon_05" />
 
         <ImageButton
             android:id="@+id/button_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:layout_alignParentRight="true"
             android:background="@drawable/dicon_01"
             android:contentDescription="@string/buttitle_info"
@@ -34,8 +34,8 @@
 
         <ImageButton
             android:id="@+id/button_fav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:layout_toLeftOf="@+id/button_info"
             android:background="@drawable/dicon_02"
             android:contentDescription="@string/buttitle_fav"
@@ -45,8 +45,8 @@
 
         <ImageButton
             android:id="@+id/button_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:layout_toLeftOf="@+id/button_fav"
             android:background="@drawable/dicon_03"
             android:contentDescription="@string/buttitle_search"
@@ -56,8 +56,8 @@
 
         <ImageButton
             android:id="@+id/button_networks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:layout_toLeftOf="@+id/button_search"
             android:background="@drawable/dicon_04"
             android:contentDescription="@string/buttitle_netw"
@@ -198,22 +198,22 @@
     <RelativeLayout
         android:id="@+id/LinLayout_detailTask01"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/topicon_size"
         android:layout_alignParentBottom="true"
         android:background="@color/MyGray" >
 
         <ImageButton
             android:id="@+id/button_left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:layout_alignParentLeft="true"
             android:background="@drawable/dicon_09"
             android:onClick="goBack" />
 
         <ImageButton
             android:id="@+id/detail_button_my"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:layout_centerInParent="true"
             android:background="@drawable/dicon_11"
             android:onClick="goMy"
@@ -222,7 +222,7 @@
         <ImageButton
             android:id="@+id/button_answer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/topicon_size"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/detail_button_my"
             android:background="@null"
@@ -234,8 +234,8 @@
 
         <ImageButton
             android:id="@+id/button_right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/topicon_size"
+            android:layout_height="@dimen/topicon_size"
             android:layout_alignParentRight="true"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/dicon_10"

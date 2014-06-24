@@ -11,5 +11,6 @@
     <dimen name="task_podpis">12sp</dimen>
     <dimen name="icon_size">50dp</dimen>
     <dimen name="icon_otstup">13dp</dimen>
-    
+    <dimen name="topicon_size">48dp</dimen>
+
 </resources>

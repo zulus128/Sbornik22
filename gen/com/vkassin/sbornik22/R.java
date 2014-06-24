@@ -183,6 +183,7 @@ public final class R {
         public static final int task_podpis=0x7f05000f;
         public static final int task_text=0x7f05000e;
         public static final int tasklistitem_horizontal_margin=0x7f050006;
+        public static final int topicon_size=0x7f050012;
     }
     public static final class drawable {
         public static final int a01=0x7f020000;

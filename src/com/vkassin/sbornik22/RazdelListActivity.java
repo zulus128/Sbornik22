@@ -39,29 +39,10 @@ public class RazdelListActivity extends Activity {
 
 		setContentView(R.layout.razdel_activity);
 
-//		if (getIntent().getBooleanExtra("Exit me", false)) {
-//			finish();
-//			return; // add this to prevent from doing unnecessary stuffs
-//		}
-
 		TextView text = (TextView) findViewById(R.id.first_screen_title);
 		Typeface tf = Typeface.createFromAsset(getAssets(),
 				"fonts/GothaProReg.otf");
 		text.setTypeface(tf);
-
-//		Common.app_ctx = getApplicationContext();
-//		Common.loadDatabase();
-
-//		ImageView okno = (ImageView) this.findViewById(R.id.imageOkno);
-//		okno.setOnClickListener(new OnClickListener() {
-//
-//			public void onClick(View v) {
-//				// TODO Auto-generated method stub
-//
-//				v.setVisibility(View.GONE);
-//			}
-//
-//		});
 
 		list = (ListView) this.findViewById(R.id.RazdelList);
 		adapter = new RazdelArrayAdapter(this, R.layout.razdel_item,

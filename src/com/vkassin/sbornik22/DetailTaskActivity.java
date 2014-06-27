@@ -69,8 +69,8 @@ public class DetailTaskActivity extends Activity {
 
 		if (ti.pic.equals("")) {
 
-			ImageView imgDiv1 = (ImageView) this.findViewById(R.id.imageDiv1);
-			imgDiv1.setVisibility(View.GONE);
+//			ImageView imgDiv1 = (ImageView) this.findViewById(R.id.imageDiv1);
+//			imgDiv1.setVisibility(View.GONE);
 			ImageView imgDiv2 = (ImageView) this.findViewById(R.id.imageDiv2);
 			imgDiv2.setVisibility(View.GONE);
 			ImageView imgPic = (ImageView) this.findViewById(R.id.imagePicture);

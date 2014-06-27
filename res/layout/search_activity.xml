@@ -70,10 +70,10 @@
     <LinearLayout
         android:id="@+id/LinLayout_title"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="21dp"
         android:layout_below="@+id/RelLayout_TasList0123"
         android:background="@color/MyDarkGray"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/bottompanel_vertical_margin"
         android:paddingTop="@dimen/bottompanel_vertical_margin" >

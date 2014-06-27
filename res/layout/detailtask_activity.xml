@@ -69,10 +69,10 @@
     <LinearLayout
         android:id="@+id/LinLayout_razdel00001"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="21dp"
         android:layout_below="@+id/RelLayout_TasList012"
         android:background="@color/MyDarkGray"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
         android:paddingBottom="@dimen/bottompanel_vertical_margin"
         android:paddingTop="@dimen/bottompanel_vertical_margin" >
@@ -94,6 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/LinLayout_razdel00001"
         android:layout_marginBottom="55dp"
+        android:layout_marginTop="5dp"
          >
 
         <LinearLayout
@@ -174,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:paddingLeft="42dp"
-                    android:paddingRight="35dp"
+                    android:paddingRight="42dp"
                     android:paddingTop="5dp"
                     android:textColor="@color/MyDarkGray"
                     android:textSize="@dimen/task_podpis" >
@@ -185,8 +186,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="36dp"
-                    android:paddingRight="24dp"
+                    android:paddingLeft="42dp"
+                    android:paddingRight="42dp"
                     android:paddingTop="5dp"
                     android:textColor="@color/MyDarkGray"
                     android:textSize="@dimen/task_text" >

@@ -92,6 +92,7 @@
         android:id="@+id/LinLayout_task01"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_above="@+id/RelLayout_razdelTask501"
         android:layout_below="@+id/LinLayout_razdel0000"
         android:orientation="vertical" >
 
@@ -108,6 +109,22 @@
             android:paddingBottom="5dp"
             android:paddingTop="0dp" >
         </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RelLayout_razdelTask501"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="a153f7739424b2b" />
     </LinearLayout>
 
 </RelativeLayout>

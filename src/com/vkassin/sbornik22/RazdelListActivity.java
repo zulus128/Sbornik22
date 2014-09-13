@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
+import com.google.android.gms.ads.*;
 
 public class RazdelListActivity extends Activity {
 
@@ -73,7 +74,12 @@ public class RazdelListActivity extends Activity {
 				startActivity(i);
 			}
 		});
-
+		
+		AdView adView = (AdView)this.findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder()
+		    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		    .build();
+		adView.loadAd(adRequest);
 	}
 
 	

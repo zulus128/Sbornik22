@@ -1,5 +1,8 @@
 package com.vkassin.sbornik22;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -21,6 +24,12 @@ public class SearchActivity extends Activity {
 		"fonts/GothaProReg.otf");
 		TextView title = (TextView) this.findViewById(R.id.DetTaskListTitle01);
 		title.setTypeface(tf);
+
+		AdView adView = (AdView)this.findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder()
+		    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		    .build();
+		adView.loadAd(adRequest);
 
 	}
 

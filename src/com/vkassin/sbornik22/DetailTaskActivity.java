@@ -4,6 +4,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -157,6 +160,12 @@ public class DetailTaskActivity extends Activity {
 //						return true;
 //					}
 //				});
+
+		AdView adView = (AdView)this.findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder()
+		    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		    .build();
+		adView.loadAd(adRequest);
 
 	}
 

@@ -3,6 +3,9 @@ package com.vkassin.sbornik22;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -38,6 +41,13 @@ public class TaskListActivity extends Activity {
             	list.refreshDrawableState();
             }
        };
+       
+		AdView adView = (AdView)this.findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder()
+		    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		    .build();
+		adView.loadAd(adRequest);
+
 	}
 
 	private void setTasks() {

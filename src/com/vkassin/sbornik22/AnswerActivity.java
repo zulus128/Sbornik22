@@ -1,5 +1,8 @@
 package com.vkassin.sbornik22;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -94,6 +97,12 @@ public class AnswerActivity extends Activity {
 		}
 
 		this.setFavButton();
+
+		AdView adView = (AdView)this.findViewById(R.id.adView);
+		AdRequest adRequest = new AdRequest.Builder()
+		    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		    .build();
+		adView.loadAd(adRequest);
 
 	}
 

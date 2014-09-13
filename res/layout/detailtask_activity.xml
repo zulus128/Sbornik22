@@ -94,8 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/LinLayout_razdel00001"
         android:layout_marginBottom="55dp"
-        android:layout_marginTop="5dp"
-         >
+        android:layout_marginTop="5dp" >
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -200,7 +199,7 @@
         android:id="@+id/LinLayout_detailTask01"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/topicon_size"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/RelLayout_razdelTask801"
         android:background="@color/MyGray" >
 
         <ImageButton
@@ -242,5 +241,21 @@
             android:background="@drawable/dicon_10"
             android:onClick="goForward" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/RelLayout_razdelTask801"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="a153f7739424b2b" />
+    </LinearLayout>
 
 </RelativeLayout>

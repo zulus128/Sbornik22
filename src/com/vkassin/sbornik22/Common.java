@@ -132,7 +132,7 @@ public class Common {
 		Log.i(TAG, "saveViewedList()");
 		FileOutputStream fos;
 		try {
-
+ 
 			fos = app_ctx.openFileOutput(VLIST_FNAME, Context.MODE_PRIVATE);
 			ObjectOutputStream os = new ObjectOutputStream(fos);
 			os.writeObject(myViewed);

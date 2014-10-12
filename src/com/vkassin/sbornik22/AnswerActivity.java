@@ -53,7 +53,7 @@ public class AnswerActivity extends Activity {
 		idname.setTypeface(tff);
 
 		TextView descr = (TextView) this.findViewById(R.id.AnswerTextView);
-		descr.setText(ti.answer);
+		descr.setText(ti.answer+ti.answer+ti.answer+ti.answer+ti.answer+ti.answer+ti.answer+ti.answer);
 		Typeface tf = Typeface.createFromAsset(getAssets(),
 				"fonts/GothaProReg.otf");
 		idd.setTypeface(tff);

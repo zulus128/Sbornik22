@@ -92,8 +92,9 @@
     <com.vkassin.sbornik22.MyScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/RelLayout_detailTask01999"
         android:layout_below="@+id/LinLayout_razdel000018"
-        android:layout_marginBottom="55dp" >
+        android:layout_marginBottom="5dp" >
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -195,7 +196,7 @@
     </com.vkassin.sbornik22.MyScrollView>
 
     <RelativeLayout
-        android:id="@+id/LinLayout_detailTask01"
+        android:id="@+id/RelLayout_detailTask01999"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/topicon_size"
         android:layout_above="@+id/RelLayout_razdelTask701"

@@ -49,7 +49,7 @@ public class DetailTaskActivity extends Activity {
 		ti = Common.getCurTask();
 
 		TextView tv = (TextView) this.findViewById(R.id.DetailTaskTextView);
-		tv.setText(ti.text);
+		tv.setText(ti.text+ti.text+ti.text+ti.text+ti.text);
 		Typeface tf = Typeface.createFromAsset(getAssets(),
 				"fonts/GothaProReg.otf");
 		tv.setTypeface(tf);
